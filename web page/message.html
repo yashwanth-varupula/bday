@@ -1,0 +1,869 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Lane - Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+            color: #333;
+            padding: 2rem;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeIn 1.2s ease forwards;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff8a80;
+            opacity: 0;
+            animation: fallDown 5s ease-in-out infinite;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .ribbon::before {
+            content: "Happy Birthday!";
+            position: absolute;
+            display: block;
+            width: 230px;
+            padding: 15px 0;
+            background-color: #ff4081;
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            transform: rotate(45deg);
+            right: -45px;
+            top: 45px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 4rem;
+            color: #e91e63;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: glowText 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e91e63, 0 0 20px #e91e63;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e91e63, 0 0 40px #e91e63;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #777;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .countdown {
+            font-size: 1.2rem;
+            color: #e91e63;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 1rem;
+            padding-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            transform: rotate(var(--rotation));
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            animation: fadeInPhoto 0.8s ease forwards;
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .polaroid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+            transform: translateY(-100%) rotate(45deg);
+            transition: transform 0.6s;
+        }
+
+        .polaroid:hover::before {
+            transform: translateY(100%) rotate(45deg);
+        }
+
+        .polaroid:nth-child(odd) {
+            --rotation: -3deg;
+        }
+
+        .polaroid:nth-child(even) {
+            --rotation: 3deg;
+        }
+
+        .polaroid:hover {
+            transform: rotate(0) translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(233, 30, 99, 0.3);
+            z-index: 2;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 2px;
+            margin-bottom: 1rem;
+            transition: filter 0.3s;
+            border: 1px solid #f5f5f5;
+        }
+
+        .polaroid:hover img {
+            filter: brightness(1.1);
+        }
+
+        .polaroid .caption {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #e91e63;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .polaroid .date {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.5rem;
+        }
+
+        /* Heart Decoration */
+        .heart-decoration {
+            position: absolute;
+            color: rgba(233, 30, 99, 0.1);
+            font-size: 8rem;
+            z-index: 0;
+        }
+
+        .heart-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(-20deg);
+        }
+
+        .heart-2 {
+            bottom: 15%;
+            right: 8%;
+            transform: rotate(15deg);
+            font-size: 6rem;
+        }
+
+        /* Video Play Button */
+        .play-button-container {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .play-button-wrapper {
+            display: inline-block;
+            position: relative;
+            padding: 15px;
+        }
+
+        .play-button {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff4081, #f50057);
+            border-radius: 50%;
+            color: white;
+            font-size: 2.5rem;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.4);
+            animation: heartbeat 1.5s infinite alternate;
+            z-index: 2;
+        }
+
+        .play-button::before {
+            content: "▶";
+            position: relative;
+            left: 5px;
+        }
+
+        .play-button::after {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border-radius: 50%;
+            border: 3px solid #ff4081;
+            animation: pulse 2s infinite;
+            opacity: 0;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(233, 30, 99, 0.6);
+        }
+
+        .play-text {
+            font-family: 'Dancing Script', cursive;
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+            color: #e91e63;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Video Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 85%;
+            max-width: 900px;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close-button {
+            position: absolute;
+            top: -50px;
+            right: -10px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 101;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .close-button:hover {
+            color: #ff4081;
+            transform: scale(1.2);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Floating Hearts */
+        .hearts-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            opacity: 0;
+            font-size: 30px;
+            filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+            animation: floatUp 10s ease-in infinite;
+        }
+
+        /* Message Section */
+        .message-section {
+            margin: 4rem 0;
+            text-align: center;
+            position: relative;
+            padding: 3rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .message-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 1.5rem;
+        }
+
+        .message-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #e91e63;
+            margin-top: 2rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInPhoto {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) rotate(var(--rotation));
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(var(--rotation));
+            }
+        }
+
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                bottom: -50px;
+                transform: translateX(0) rotate(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateX(var(--translateX)) rotate(var(--rotate));
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                bottom: 110%;
+                opacity: 0;
+                transform: translateX(calc(var(--translateX) * 2)) rotate(calc(var(--rotate) * 2));
+            }
+        }
+
+        @keyframes fallDown {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(calc(100vh + 100px)) rotate(720deg);
+                opacity: 0.3;
+            }
+        }
+
+        .gift-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff4081, #f50057);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gift-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.6);
+        }
+
+        .gift-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s;
+        }
+
+        .gift-button:hover::before {
+            left: 100%;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+
+            .ribbon {
+                top: -20px;
+                right: -20px;
+                width: 120px;
+                height: 120px;
+            }
+            
+            .ribbon::before {
+                width: 200px;
+                padding: 10px 0;
+                font-size: 14px;
+                right: -45px;
+                top: 35px;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .polaroid img {
+                height: 170px;
+            }
+            
+            .play-button {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 2rem;
+            }
+
+            .message-section {
+                padding: 2rem 1rem;
+            }
+
+            .message-title {
+                font-size: 2rem;
+            }
+
+            .message-content {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+            
+            .polaroid {
+                padding: 0.75rem;
+                padding-bottom: 1.5rem;
+            }
+            
+            .polaroid img {
+                height: 130px;
+            }
+            
+            .polaroid .caption {
+                font-size: 1.1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .play-button {
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+            }
+
+            .play-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti-container" id="confettiContainer"><div class="confetti" style="width: 12.3029px; height: 12.3029px; background-color: rgb(216, 27, 96); left: 62.1923%; opacity: 0.388333; animation-duration: 4.81315s; animation-delay: 1.2817s;"></div><div class="confetti" style="width: 10.8285px; height: 10.8285px; background-color: rgb(255, 64, 129); left: 47.556%; opacity: 0.918072; animation-duration: 4.79546s; animation-delay: 3.9775s;"></div><div class="confetti" style="width: 8.25724px; height: 8.25724px; background-color: rgb(194, 24, 91); left: 59.9797%; opacity: 0.227663; animation-duration: 4.89575s; animation-delay: 1.91942s;"></div><div class="confetti" style="width: 9.78606px; height: 9.78606px; background-color: rgb(236, 64, 122); left: 83.7607%; opacity: 0.798764; animation-duration: 3.99593s; animation-delay: 0.153278s;"></div><div class="confetti" style="width: 8.20181px; height: 8.20181px; background-color: rgb(248, 187, 208); left: 4.5635%; opacity: 0.974379; animation-duration: 3.48435s; animation-delay: 3.81854s;"></div><div class="confetti" style="width: 14.7548px; height: 14.7548px; background-color: rgb(173, 20, 87); left: 26.6553%; opacity: 0.542885; animation-duration: 2.86652s; animation-delay: 0.202552s;"></div><div class="confetti" style="width: 12.5231px; height: 12.5231px; background-color: rgb(255, 128, 171); left: 89.3336%; opacity: 0.375979; animation-duration: 2.81478s; animation-delay: 0.427717s;"></div><div class="confetti" style="width: 11.9105px; height: 11.9105px; background-color: rgb(173, 20, 87); left: 81.6629%; opacity: 0.791215; animation-duration: 4.14911s; animation-delay: 3.68074s;"></div><div class="confetti" style="width: 7.96935px; height: 7.96935px; background-color: rgb(173, 20, 87); left: 89.104%; opacity: 0.961967; animation-duration: 2.71202s; animation-delay: 1.52685s;"></div><div class="confetti" style="width: 11.5478px; height: 11.5478px; background-color: rgb(216, 27, 96); left: 90.3507%; opacity: 0.867814; animation-duration: 4.71093s; animation-delay: 1.69367s;"></div><div class="confetti" style="width: 6.49531px; height: 6.49531px; background-color: rgb(255, 128, 171); left: 60.3088%; opacity: 0.245997; animation-duration: 3.3282s; animation-delay: 4.50331s;"></div><div class="confetti" style="width: 12.6381px; height: 12.6381px; background-color: rgb(173, 20, 87); left: 40.0532%; opacity: 0.230509; animation-duration: 3.41038s; animation-delay: 4.64137s;"></div><div class="confetti" style="width: 6.90775px; height: 6.90775px; background-color: rgb(216, 27, 96); left: 35.1189%; opacity: 0.716282; animation-duration: 2.53061s; animation-delay: 0.185595s;"></div><div class="confetti" style="width: 8.94967px; height: 8.94967px; background-color: rgb(255, 64, 129); left: 33.5679%; opacity: 0.92813; animation-duration: 3.0096s; animation-delay: 0.860696s;"></div><div class="confetti" style="width: 11.8631px; height: 11.8631px; background-color: rgb(255, 128, 171); left: 65.9308%; opacity: 0.961098; animation-duration: 3.9777s; animation-delay: 3.36637s;"></div><div class="confetti" style="width: 14.2665px; height: 14.2665px; background-color: rgb(255, 128, 171); left: 89.6858%; opacity: 0.679631; animation-duration: 2.13484s; animation-delay: 4.11344s;"></div><div class="confetti" style="width: 10.5801px; height: 10.5801px; background-color: rgb(194, 24, 91); left: 56.3489%; opacity: 0.46245; animation-duration: 2.12655s; animation-delay: 0.113868s;"></div><div class="confetti" style="width: 8.25004px; height: 8.25004px; background-color: rgb(248, 187, 208); left: 38.1051%; opacity: 0.876206; animation-duration: 3.09657s; animation-delay: 3.09755s;"></div><div class="confetti" style="width: 12.3927px; height: 12.3927px; background-color: rgb(255, 128, 171); left: 68.4514%; opacity: 0.290435; animation-duration: 4.8828s; animation-delay: 0.2103s;"></div><div class="confetti" style="width: 10.6454px; height: 10.6454px; background-color: rgb(216, 27, 96); left: 89.6429%; opacity: 0.374142; animation-duration: 3.86955s; animation-delay: 0.0631444s;"></div></div>
+    
+    <div class="container">
+        <div class="ribbon"></div>
+
+        <header>
+            <h1>Dear Sunshine!</h1>
+            <p class="subtitle">Celebrating the most wonderful person in my life...</p>
+        
+        </header>
+
+        <div class="message-section">
+            <h2 class="message-title">A Special Message For You</h2>
+            <p class="message-content">
+                To the most amazing person I know, you have been playing a biggest role in my life. Maybe some eyes will see you as just a person but i dont know why my eyes saw you as an angel
+                mainly thanks for being as my best friend. Thanks for always there for me. Thanks for every thing. idhivaruku emina rayali ante ventane vachevi Ippudu asalu mana gurinchi radham 
+                ante emi ravtla maybe mana conversations thaggatam valla and fact enti ante manaki connection for sure thaggindi and nuvvu emina share cheskotam kuda thaggindi ane anukuntunna. 
+                but No matter how much time passes or how far we are, our bond always feels the same for me. My value for you keeps growing more and more every single day. edhemayina netho naku
+                 matladuthu undatam ante chala istam thitukunna kottukunna sare whenever i remember our old days denamma those days are really cool dude! 
+            </p><br> <br>
+            <p class="message-content"> 
+                naku daily oka habit enti ante night prathi okkaroju ne gurinchi emina gurthu cheskuntu padukunta because 
+                your presence even in my brain also makes everything just feels lighter, even on the heaviest days 
+                Whatever it maybe, I know life gets busy and we don’t always talk through out the day, but somehow, your presence never fades. Whether it's the small conversations,
+                the random laughs over the dumbest things, or just the comfort of knowing you're there all of it means so much more than I can explain. You’re not just a best friend, you’re like family to me, 
+                and I want you to know that no matter where life takes us, or how many things change, I’ll always there for you no chance nenu ninnu vadhilestha ani,elaga ante you are a mark on my life that 
+                I’ll carry with me forever, its my promise. Even if we fight or grow distant at times, nothing will change the place you have in my life. , and I’m genuinely thankful that I got to know someone as real, strong, and kind as you. 
+            </p><br> <br>
+                <p class="message-content">   
+                I care about you more than you care about me. I’ve always valued you more than you’ve ever valued me. I’ve given you more importance than you’ve ever given me — and that’s just the truth, my dear sunshine.
+                Maybe you don’t realize the care, importance, and value I’ve given you… and I know you value me too, but not as much as i do. You are the loyal person i ever seen till now,chusa ga ma clg clg motham rotha mandha and neku 
+                eppudo cheppa ne lanti vallu ipd undatam kastam ani adhe prove avthundi. nek ochetodunbale luckyy. mondi dhanivi kudaa. oorike aluguthav malli aliginappudu bale cute untav appudu chusaga hehe.
+                kani eh madhya ento face kuda maripothundi chetha motham dengi thintav ga 
+                na mata vinu antha aapesi gym ki velli body penchu hehe. ayina asaley badhakaniki brand ambasdor vi inka nuvvem velthav but works avi bane chesthuunav ga badhakam unna kuda......edho cheppali anukunna indhaka....ah collage anna kadha....
+                Collage lo nenu evvartho pedha connecet avvala I don’t know why but There’s a comfort in talking to you that I can’t 
+                really find anywhere else. You're one of the very few people I can be completely myself around
+                
+               
+            </p><br><br>
+            <p class="message-content">
+                Maybe I was never perfect because we spend most of our time on chatting rather that face to face convos, maybe ekkuv vagesi kuda unta evevo. I don’t regret a single moment, because you mattered to me — truly. 
+                If one day you sit back and think of me, I hope you remember someone who cared without limits, who showed up without being asked, and who saw your worth even when you didn’t. I’m not asking for anything in return 
+                just peace in knowing that what I felt was real. 
+            </p>
+            <div class="signature">With all my love ❤️</div>
+            <button class="gift-button" id="surpriseButton">Click For A Surprise!</button>
+        </div>
+
+        <div class="play-button-container">
+            <div class="play-button-wrapper">
+                <div class="play-button" id="playButton"></div>
+            </div>
+            <div class="play-text">Watch Our Special Moments</div>
+        </div>
+
+        <div class="heart-decoration heart-1">❤</div>
+        <div class="heart-decoration heart-2">❤</div>
+    </div>
+
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-button" id="closeButton">×</button>
+            <video id="specialVideo" controls="">
+                <source src="birthday_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="hearts-container" id="heartsContainer"><div class="heart" style="left: 68.8269%; --translateX: -12.35726482136895px; --rotate: -22.07043184743747deg; animation-duration: 11.3856s; color: rgb(246, 85, 87); font-size: 38.6947px;">💖</div><div class="heart" style="left: 40.1538%; --translateX: 32.81794248724195px; --rotate: 24.295512428698707deg; animation-duration: 14.4785s; color: rgb(246, 91, 85); font-size: 46.8378px;">💓</div><div class="heart" style="left: 18.0892%; --translateX: -67.5845106020722px; --rotate: -6.508467602896779deg; animation-duration: 11.3612s; color: rgb(246, 111, 85); font-size: 29.6078px;">❤</div><div class="heart" style="left: 29.0108%; --translateX: 45.11425477604911px; --rotate: 18.785557782611434deg; animation-duration: 8.48282s; color: rgb(246, 107, 85); font-size: 23.2991px;">💖</div><div class="heart" style="left: 52.4407%; --translateX: 15.21870818670665px; --rotate: -17.847574908619002deg; animation-duration: 8.0575s; color: rgb(246, 105, 85); font-size: 46.4752px;">💘</div><div class="heart" style="left: 36.4879%; --translateX: 72.04363806220209px; --rotate: -19.665530597491674deg; animation-duration: 11.5666s; color: rgb(246, 85, 94); font-size: 34.4409px;">💝</div><div class="heart" style="left: 79.1629%; --translateX: 28.648839126646195px; --rotate: 15.29302404402565deg; animation-duration: 10.977s; color: rgb(246, 85, 99); font-size: 33.2872px;">💕</div><div class="heart" style="left: 55.9936%; --translateX: 38.60571081343758px; --rotate: -8.355094857531288deg; animation-duration: 14.9069s; color: rgb(246, 112, 85); font-size: 29.9155px;">💓</div><div class="heart" style="left: 45.3729%; --translateX: -70.91878544637551px; --rotate: -26.62005552838902deg; animation-duration: 13.0707s; color: rgb(246, 130, 85); font-size: 46.3076px;">💖</div><div class="heart" style="left: 84.572%; --translateX: -2.928340903164795px; --rotate: -6.605839124368881deg; animation-duration: 9.29235s; color: rgb(246, 98, 85); font-size: 34.0302px;">💝</div><div class="heart" style="left: 67.7618%; --translateX: -68.5252269205053px; --rotate: -5.721031970633597deg; animation-duration: 8.01966s; color: rgb(246, 127, 85); font-size: 48.9998px;">♥</div><div class="heart" style="left: 25.4612%; --translateX: -19.733472867631498px; --rotate: -3.0763547782041023deg; animation-duration: 8.33566s; color: rgb(246, 110, 85); font-size: 22.6409px;">♥</div><div class="heart" style="left: 84.6807%; --translateX: 69.87853436252504px; --rotate: 20.465233126381484deg; animation-duration: 14.3809s; color: rgb(246, 85, 109); font-size: 31.8042px;">💘</div><div class="heart" style="left: 10.5569%; --translateX: 10.739228434443802px; --rotate: 1.327736740166813deg; animation-duration: 12.0132s; color: rgb(246, 133, 85); font-size: 29.8362px;">💗</div><div class="heart" style="left: 29.0894%; --translateX: -26.905213815785878px; --rotate: 18.006948215535957deg; animation-duration: 13.4866s; color: rgb(246, 85, 114); font-size: 26.6115px;">💖</div><div class="heart" style="left: 0.0257303%; --translateX: 57.458579939486896px; --rotate: 22.1670072315747deg; animation-duration: 14.4303s; color: rgb(246, 125, 85); font-size: 37.6361px;">💕</div><div class="heart" style="left: 38.736%; --translateX: -63.06845162285312px; --rotate: 5.019878506184398deg; animation-duration: 13.6606s; color: rgb(246, 112, 85); font-size: 22.7558px;">💝</div><div class="heart" style="left: 63.1569%; --translateX: -52.56147968466617px; --rotate: -24.401288776931246deg; animation-duration: 12.752s; color: rgb(246, 85, 88); font-size: 32.1113px;">💓</div><div class="heart" style="left: 92.4029%; --translateX: 23.83021652255296px; --rotate: -6.414012000384805deg; animation-duration: 12.7502s; color: rgb(246, 87, 85); font-size: 35.8309px;">❤</div><div class="heart" style="left: 27.3%; --translateX: 28.011671483038754px; --rotate: -17.482725104190642deg; animation-duration: 12.3628s; color: rgb(246, 90, 85); font-size: 28.6828px;">💘</div></div>
+
+    <script>
+        // Wait for DOM to fully load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation delay for polaroid photos
+            const polaroids = document.querySelectorAll('.polaroid');
+            polaroids.forEach((polaroid, index) => {
+                polaroid.style.animationDelay = `${index * 0.15}s`;
+            });
+
+            // Video modal functionality
+            const playButton = document.getElementById('playButton');
+            const videoModal = document.getElementById('videoModal');
+            const closeButton = document.getElementById('closeButton');
+            const video = document.getElementById('specialVideo');
+
+            playButton.addEventListener('click', function() {
+                videoModal.classList.add('active');
+                setTimeout(() => {
+                    video.play();
+                }, 500);
+            });
+
+            closeButton.addEventListener('click', function() {
+                videoModal.classList.remove('active');
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Close modal when clicking outside the video
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    videoModal.classList.remove('active');
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+
+            // Surprise button
+            const surpriseButton = document.getElementById('surpriseButton');
+surpriseButton.addEventListener('click', function() {
+    
+    createConfettiBurst();
+    setTimeout(() => {
+        window.location.href = 'cake.html'; // Replace 'next_page.html' with the actual URL of the next page
+    }, 2000); // Adjust the delay as needed
+});
+
+            // Floating hearts animation
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heartSymbols = ['❤', '♥', '💕', '💖', '💓', '💗', '💘', '💝'];
+            
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                
+                // Random position and animation
+                const startPosition = Math.random() * 100;
+                const translateX = Math.random() * 150 - 75; // Random movement left or right
+                const rotate = Math.random() * 60 - 30; // Random rotation
+                heart.style.left = `${startPosition}%`;
+                heart.style.setProperty('--translateX', `${translateX}px`);
+                heart.style.setProperty('--rotate', `${rotate}deg`);
+                heart.style.animationDuration = `${8 + Math.random() * 7}s`; // Random duration
+                heart.style.color = `hsl(${340 + Math.random() * 40}, 90%, 65%)`;
+                heart.style.fontSize = `${20 + Math.random() * 30}px`;
+                
+                heartsContainer.appendChild(heart);
+                
+                // Remove heart after animation completes
+                setTimeout(() => {
+                    heart.remove();
+                }, 15000);
+            }
+            
+            // Create hearts at random intervals
+            setInterval(createHeart, 600);
+            
+            // Create initial hearts
+            for (let i = 0; i < 10; i++) {
+                setTimeout(createHeart, i * 300);
+            }
+
+            // Confetti animation
+            const confettiContainer = document.getElementById('confettiContainer');
+            const confettiColors = [
+                '#ff4081', '#f50057', '#ff80ab', '#f8bbd0', 
+                '#ec407a', '#ad1457', '#d81b60', '#c2185b'
+            ];
+
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.opacity = Math.random() * 0.8 + 0.2;
+                
+                // Random animation duration and delay
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.animationDelay = `${Math.random() * 5}s`;
+                
+                confettiContainer.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, 8000);
+            }
+
+            function createConfettiBurst() {
+                for (let i = 0; i < 100; i++) {
+                    setTimeout(() => {
+                        createConfetti();
+                    }, i * 20);
+                }
+            }
+
+            // Create initial confetti
+            createConfettiBurst();
+            
+            // Create confetti periodically
+            setInterval(() => {
+                for (let i = 0; i < 5; i++) {
+                    createConfetti();
+                }
+            }, 2000);
+            
+            // Countdown functionality
+            const countdownEl = document.getElementById('countdown');
+            const birthday = new Date(); // Set today as birthday for demo
+            birthday.setHours(23, 59, 59); // End of the day
+            
+            function updateCountdown() {
+                const now = new Date();
+                const diff = birthday - now;
+                
+                if (diff <= 0) {
+                    countdownEl.innerHTML = "🎉 It's your birthday! 🎉";
+                    return;
+                }
+                
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                countdownEl.innerHTML = `Celebrating in: ${hours}h ${minutes}m ${seconds}s`;
+            }
+            
+            // Update countdown every second
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Optional background music
+            // Uncomment the following to add background music
+            /*
+            const bgMusic = new Audio('romantic_music.mp3');
+            bgMusic.loop = true;
+            bgMusic.volume = 0.3;
+            
+            // Play music when user interacts with the page
+            document.body.addEventListener('click', function() {
+                bgMusic.play();
+            }, { once: true });
+            */
+        });
+    </script>
+
+</body></html>

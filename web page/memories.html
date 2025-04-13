@@ -1,0 +1,2826 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romantic Hall of Memories</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /*! tailwindcss v4.0.15 | MIT License | https://tailwindcss.com */
+      @layer theme, base, components, utilities;
+      @layer theme {
+        :root,
+        :host {
+          --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+          --color-red-600: oklch(0.577 0.245 27.325);
+          --color-red-700: oklch(0.505 0.213 27.518);
+          --color-indigo-600: oklch(0.511 0.262 276.966);
+          --color-indigo-700: oklch(0.457 0.24 277.023);
+          --color-purple-500: oklch(0.627 0.265 303.9);
+          --color-purple-600: oklch(0.558 0.288 302.321);
+          --color-purple-700: oklch(0.496 0.265 301.924);
+          --color-purple-800: oklch(0.438 0.218 303.724);
+          --color-fuchsia-600: oklch(0.591 0.293 322.896);
+          --color-fuchsia-700: oklch(0.518 0.253 323.949);
+          --color-pink-200: oklch(0.899 0.061 343.231);
+          --color-pink-300: oklch(0.823 0.12 346.018);
+          --color-pink-400: oklch(0.718 0.202 349.761);
+          --color-pink-500: oklch(0.656 0.241 354.308);
+          --color-pink-600: oklch(0.592 0.249 0.584);
+          --color-pink-700: oklch(0.525 0.223 3.958);
+          --color-pink-900: oklch(0.408 0.153 2.432);
+          --color-gray-200: oklch(0.928 0.006 264.531);
+          --color-gray-300: oklch(0.872 0.01 258.338);
+          --color-white: #fff;
+          --spacing: 0.25rem;
+          --container-md: 28rem;
+          --text-xs: 0.75rem;
+          --text-xs--line-height: calc(1 / 0.75);
+          --text-sm: 0.875rem;
+          --text-sm--line-height: calc(1.25 / 0.875);
+          --text-lg: 1.125rem;
+          --text-lg--line-height: calc(1.75 / 1.125);
+          --text-xl: 1.25rem;
+          --text-xl--line-height: calc(1.75 / 1.25);
+          --text-2xl: 1.5rem;
+          --text-2xl--line-height: calc(2 / 1.5);
+          --text-4xl: 2.25rem;
+          --text-4xl--line-height: calc(2.5 / 2.25);
+          --text-6xl: 3.75rem;
+          --text-6xl--line-height: 1;
+          --font-weight-semibold: 600;
+          --font-weight-bold: 700;
+          --radius-lg: 0.5rem;
+          --radius-xl: 0.75rem;
+          --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          --default-transition-duration: 150ms;
+          --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          --default-font-family: var(--font-sans);
+          --default-mono-font-family: var(--font-mono);
+        }
+      }
+      @layer base {
+        *,
+        ::after,
+        ::before,
+        ::backdrop,
+        ::file-selector-button {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          border: 0 solid;
+        }
+        html,
+        :host {
+          line-height: 1.5;
+          -webkit-text-size-adjust: 100%;
+          tab-size: 4;
+          font-family: var(
+            --default-font-family,
+            ui-sans-serif,
+            system-ui,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji"
+          );
+          font-feature-settings: var(--default-font-feature-settings, normal);
+          font-variation-settings: var(
+            --default-font-variation-settings,
+            normal
+          );
+          -webkit-tap-highlight-color: transparent;
+        }
+        hr {
+          height: 0;
+          color: inherit;
+          border-top-width: 1px;
+        }
+        abbr:where([title]) {
+          -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        a {
+          color: inherit;
+          -webkit-text-decoration: inherit;
+          text-decoration: inherit;
+        }
+        b,
+        strong {
+          font-weight: bolder;
+        }
+        code,
+        kbd,
+        samp,
+        pre {
+          font-family: var(
+            --default-mono-font-family,
+            ui-monospace,
+            SFMono-Regular,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Liberation Mono",
+            "Courier New",
+            monospace
+          );
+          font-feature-settings: var(
+            --default-mono-font-feature-settings,
+            normal
+          );
+          font-variation-settings: var(
+            --default-mono-font-variation-settings,
+            normal
+          );
+          font-size: 1em;
+        }
+        small {
+          font-size: 80%;
+        }
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+        sub {
+          bottom: -0.25em;
+        }
+        sup {
+          top: -0.5em;
+        }
+        table {
+          text-indent: 0;
+          border-color: inherit;
+          border-collapse: collapse;
+        }
+        :-moz-focusring {
+          outline: auto;
+        }
+        progress {
+          vertical-align: baseline;
+        }
+        summary {
+          display: list-item;
+        }
+        ol,
+        ul,
+        menu {
+          list-style: none;
+        }
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+          display: block;
+          vertical-align: middle;
+        }
+        img,
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+        button,
+        input,
+        select,
+        optgroup,
+        textarea,
+        ::file-selector-button {
+          font: inherit;
+          font-feature-settings: inherit;
+          font-variation-settings: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          border-radius: 0;
+          background-color: transparent;
+          opacity: 1;
+        }
+        :where(select:is([multiple], [size])) optgroup {
+          font-weight: bolder;
+        }
+        :where(select:is([multiple], [size])) optgroup option {
+          padding-inline-start: 20px;
+        }
+        ::file-selector-button {
+          margin-inline-end: 4px;
+        }
+        ::placeholder {
+          opacity: 1;
+        }
+        @supports (not (-webkit-appearance: -apple-pay-button)) or
+          (contain-intrinsic-size: 1px) {
+          ::placeholder {
+            color: color-mix(in oklab, currentColor 50%, transparent);
+          }
+        }
+        textarea {
+          resize: vertical;
+        }
+        ::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
+        ::-webkit-date-and-time-value {
+          min-height: 1lh;
+          text-align: inherit;
+        }
+        ::-webkit-datetime-edit {
+          display: inline-flex;
+        }
+        ::-webkit-datetime-edit-fields-wrapper {
+          padding: 0;
+        }
+        ::-webkit-datetime-edit,
+        ::-webkit-datetime-edit-year-field,
+        ::-webkit-datetime-edit-month-field,
+        ::-webkit-datetime-edit-day-field,
+        ::-webkit-datetime-edit-hour-field,
+        ::-webkit-datetime-edit-minute-field,
+        ::-webkit-datetime-edit-second-field,
+        ::-webkit-datetime-edit-millisecond-field,
+        ::-webkit-datetime-edit-meridiem-field {
+          padding-block: 0;
+        }
+        :-moz-ui-invalid {
+          box-shadow: none;
+        }
+        button,
+        input:where([type="button"], [type="reset"], [type="submit"]),
+        ::file-selector-button {
+          appearance: button;
+        }
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          height: auto;
+        }
+        [hidden]:where(:not([hidden="until-found"])) {
+          display: none !important;
+        }
+      }
+      @layer utilities {
+        .pointer-events-none {
+          pointer-events: none;
+        }
+        .absolute {
+          position: absolute;
+        }
+        .fixed {
+          position: fixed;
+        }
+        .relative {
+          position: relative;
+        }
+        .inset-0 {
+          inset: calc(var(--spacing) * 0);
+        }
+        .top-1\/2 {
+          top: calc(1 / 2 * 100%);
+        }
+        .right-0 {
+          right: calc(var(--spacing) * 0);
+        }
+        .right-4 {
+          right: calc(var(--spacing) * 4);
+        }
+        .right-8 {
+          right: calc(var(--spacing) * 8);
+        }
+        .bottom-0 {
+          bottom: calc(var(--spacing) * 0);
+        }
+        .bottom-24 {
+          bottom: calc(var(--spacing) * 24);
+        }
+        .left-0 {
+          left: calc(var(--spacing) * 0);
+        }
+        .left-4 {
+          left: calc(var(--spacing) * 4);
+        }
+        .z-10 {
+          z-index: 10;
+        }
+        .z-40 {
+          z-index: 40;
+        }
+        .container {
+          width: 100%;
+          @media (width >= 40rem) {
+            max-width: 40rem;
+          }
+          @media (width >= 48rem) {
+            max-width: 48rem;
+          }
+          @media (width >= 64rem) {
+            max-width: 64rem;
+          }
+          @media (width >= 80rem) {
+            max-width: 80rem;
+          }
+          @media (width >= 96rem) {
+            max-width: 96rem;
+          }
+        }
+        .mx-auto {
+          margin-inline: auto;
+        }
+        .my-8 {
+          margin-block: calc(var(--spacing) * 8);
+        }
+        .mt-2 {
+          margin-top: calc(var(--spacing) * 2);
+        }
+        .mt-3 {
+          margin-top: calc(var(--spacing) * 3);
+        }
+        .mt-4 {
+          margin-top: calc(var(--spacing) * 4);
+        }
+        .mt-8 {
+          margin-top: calc(var(--spacing) * 8);
+        }
+        .mr-2 {
+          margin-right: calc(var(--spacing) * 2);
+        }
+        .mb-2 {
+          margin-bottom: calc(var(--spacing) * 2);
+        }
+        .mb-3 {
+          margin-bottom: calc(var(--spacing) * 3);
+        }
+        .mb-4 {
+          margin-bottom: calc(var(--spacing) * 4);
+        }
+        .mb-16 {
+          margin-bottom: calc(var(--spacing) * 16);
+        }
+        .block {
+          display: block;
+        }
+        .flex {
+          display: flex;
+        }
+        .hidden {
+          display: none;
+        }
+        .inline-block {
+          display: inline-block;
+        }
+        .h-80 {
+          height: calc(var(--spacing) * 80);
+        }
+        .h-full {
+          height: 100%;
+        }
+        .w-64 {
+          width: calc(var(--spacing) * 64);
+        }
+        .w-full {
+          width: 100%;
+        }
+        .max-w-md {
+          max-width: var(--container-md);
+        }
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+        .-translate-y-1\/2 {
+          --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+        .transform {
+          transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
+            var(--tw-skew-x) var(--tw-skew-y);
+        }
+        .animate-pulse {
+          animation: var(--animate-pulse);
+        }
+        .snap-x {
+          scroll-snap-type: x var(--tw-scroll-snap-strictness);
+        }
+        .snap-mandatory {
+          --tw-scroll-snap-strictness: mandatory;
+        }
+        .snap-center {
+          scroll-snap-align: center;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .space-x-8 {
+          :where(& > :not(:last-child)) {
+            --tw-space-x-reverse: 0;
+            margin-inline-start: calc(
+              calc(var(--spacing) * 8) * var(--tw-space-x-reverse)
+            );
+            margin-inline-end: calc(
+              calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse))
+            );
+          }
+        }
+        .overflow-hidden {
+          overflow: hidden;
+        }
+        .overflow-x-auto {
+          overflow-x: auto;
+        }
+        .overflow-x-hidden {
+          overflow-x: hidden;
+        }
+        .rounded {
+          border-radius: 0.25rem;
+        }
+        .rounded-full {
+          border-radius: calc(infinity * 1px);
+        }
+        .rounded-lg {
+          border-radius: var(--radius-lg);
+        }
+        .rounded-xl {
+          border-radius: var(--radius-xl);
+        }
+        .bg-pink-900 {
+          background-color: var(--color-pink-900);
+        }
+        .bg-gradient-to-br {
+          --tw-gradient-position: to bottom right in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-r {
+          --tw-gradient-position: to right in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-t {
+          --tw-gradient-position: to top in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .from-pink-400 {
+          --tw-gradient-from: var(--color-pink-400);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-500 {
+          --tw-gradient-from: var(--color-pink-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-600 {
+          --tw-gradient-from: var(--color-pink-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-700 {
+          --tw-gradient-from: var(--color-pink-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-900 {
+          --tw-gradient-from: var(--color-pink-900);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-purple-500 {
+          --tw-gradient-from: var(--color-purple-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-purple-600 {
+          --tw-gradient-from: var(--color-purple-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .via-fuchsia-600 {
+          --tw-gradient-via: var(--color-fuchsia-600);
+          --tw-gradient-via-stops: var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-via) var(--tw-gradient-via-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-via-stops);
+        }
+        .via-purple-800 {
+          --tw-gradient-via: var(--color-purple-800);
+          --tw-gradient-via-stops: var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-via) var(--tw-gradient-via-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-via-stops);
+        }
+        .to-fuchsia-600 {
+          --tw-gradient-to: var(--color-fuchsia-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-fuchsia-700 {
+          --tw-gradient-to: var(--color-fuchsia-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-indigo-600 {
+          --tw-gradient-to: var(--color-indigo-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-indigo-700 {
+          --tw-gradient-to: var(--color-indigo-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-pink-500 {
+          --tw-gradient-to: var(--color-pink-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-pink-700 {
+          --tw-gradient-to: var(--color-pink-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-600 {
+          --tw-gradient-to: var(--color-purple-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-700 {
+          --tw-gradient-to: var(--color-purple-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-800 {
+          --tw-gradient-to: var(--color-purple-800);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-red-600 {
+          --tw-gradient-to: var(--color-red-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-red-700 {
+          --tw-gradient-to: var(--color-red-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-transparent {
+          --tw-gradient-to: transparent;
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .bg-clip-text {
+          background-clip: text;
+        }
+        .object-cover {
+          object-fit: cover;
+        }
+        .p-3 {
+          padding: calc(var(--spacing) * 3);
+        }
+        .p-4 {
+          padding: calc(var(--spacing) * 4);
+        }
+        .p-5 {
+          padding: calc(var(--spacing) * 5);
+        }
+        .p-6 {
+          padding: calc(var(--spacing) * 6);
+        }
+        .px-4 {
+          padding-inline: calc(var(--spacing) * 4);
+        }
+        .px-6 {
+          padding-inline: calc(var(--spacing) * 6);
+        }
+        .px-8 {
+          padding-inline: calc(var(--spacing) * 8);
+        }
+        .py-2 {
+          padding-block: calc(var(--spacing) * 2);
+        }
+        .py-3 {
+          padding-block: calc(var(--spacing) * 3);
+        }
+        .py-6 {
+          padding-block: calc(var(--spacing) * 6);
+        }
+        .py-8 {
+          padding-block: calc(var(--spacing) * 8);
+        }
+        .text-center {
+          text-align: center;
+        }
+        .font-\[\'Caveat\'\] {
+          font-family: "Caveat";
+        }
+        .text-2xl {
+          font-size: var(--text-2xl);
+          line-height: var(--tw-leading, var(--text-2xl--line-height));
+        }
+        .text-4xl {
+          font-size: var(--text-4xl);
+          line-height: var(--tw-leading, var(--text-4xl--line-height));
+        }
+        .text-lg {
+          font-size: var(--text-lg);
+          line-height: var(--tw-leading, var(--text-lg--line-height));
+        }
+        .text-sm {
+          font-size: var(--text-sm);
+          line-height: var(--tw-leading, var(--text-sm--line-height));
+        }
+        .text-xl {
+          font-size: var(--text-xl);
+          line-height: var(--tw-leading, var(--text-xl--line-height));
+        }
+        .text-xs {
+          font-size: var(--text-xs);
+          line-height: var(--tw-leading, var(--text-xs--line-height));
+        }
+        .font-bold {
+          --tw-font-weight: var(--font-weight-bold);
+          font-weight: var(--font-weight-bold);
+        }
+        .font-semibold {
+          --tw-font-weight: var(--font-weight-semibold);
+          font-weight: var(--font-weight-semibold);
+        }
+        .text-gray-200 {
+          color: var(--color-gray-200);
+        }
+        .text-gray-300 {
+          color: var(--color-gray-300);
+        }
+        .text-pink-200 {
+          color: var(--color-pink-200);
+        }
+        .text-pink-300 {
+          color: var(--color-pink-300);
+        }
+        .text-transparent {
+          color: transparent;
+        }
+        .text-white {
+          color: var(--color-white);
+        }
+        .italic {
+          font-style: italic;
+        }
+        .opacity-70 {
+          opacity: 70%;
+        }
+        .shadow-2xl {
+          --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .shadow-lg {
+          --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+            0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .transition {
+          transition-property: color, background-color, border-color,
+            outline-color, text-decoration-color, fill, stroke,
+            --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity,
+            box-shadow, transform, translate, scale, rotate, filter,
+            -webkit-backdrop-filter, backdrop-filter;
+          transition-timing-function: var(
+            --tw-ease,
+            var(--default-transition-timing-function)
+          );
+          transition-duration: var(
+            --tw-duration,
+            var(--default-transition-duration)
+          );
+        }
+        .hover\:scale-105 {
+          &:hover {
+            @media (hover: hover) {
+              --tw-scale-x: 105%;
+              --tw-scale-y: 105%;
+              --tw-scale-z: 105%;
+              scale: var(--tw-scale-x) var(--tw-scale-y);
+            }
+          }
+        }
+        .hover\:shadow-lg {
+          &:hover {
+            @media (hover: hover) {
+              --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 /
+                        0.1)),
+                0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+              box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+                var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+                var(--tw-shadow);
+            }
+          }
+        }
+        .md\:right-12 {
+          @media (width >= 48rem) {
+            right: calc(var(--spacing) * 12);
+          }
+        }
+        .md\:block {
+          @media (width >= 48rem) {
+            display: block;
+          }
+        }
+        .md\:text-6xl {
+          @media (width >= 48rem) {
+            font-size: var(--text-6xl);
+            line-height: var(--tw-leading, var(--text-6xl--line-height));
+          }
+        }
+        .md\:text-xl {
+          @media (width >= 48rem) {
+            font-size: var(--text-xl);
+            line-height: var(--tw-leading, var(--text-xl--line-height));
+          }
+        }
+      }
+      @property --tw-translate-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-translate-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-translate-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-rotate-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateX(0);
+      }
+      @property --tw-rotate-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateY(0);
+      }
+      @property --tw-rotate-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateZ(0);
+      }
+      @property --tw-skew-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: skewX(0);
+      }
+      @property --tw-skew-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: skewY(0);
+      }
+      @property --tw-scroll-snap-strictness {
+        syntax: "*";
+        inherits: false;
+        initial-value: proximity;
+      }
+      @property --tw-space-x-reverse {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-gradient-position {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-from {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-via {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-to {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-stops {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-via-stops {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-from-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 0%;
+      }
+      @property --tw-gradient-via-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 50%;
+      }
+      @property --tw-gradient-to-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 100%;
+      }
+      @property --tw-font-weight {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-shadow-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-inset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-inset-shadow-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-inset-ring-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-inset-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-ring-inset {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-offset-width {
+        syntax: "<length>";
+        inherits: false;
+        initial-value: 0px;
+      }
+      @property --tw-ring-offset-color {
+        syntax: "*";
+        inherits: false;
+        initial-value: #fff;
+      }
+      @property --tw-ring-offset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-scale-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @property --tw-scale-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @property --tw-scale-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /*! tailwindcss v4.0.15 | MIT License | https://tailwindcss.com */
+      @layer theme, base, components, utilities;
+      @layer theme {
+        :root,
+        :host {
+          --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+          --color-red-600: oklch(0.577 0.245 27.325);
+          --color-red-700: oklch(0.505 0.213 27.518);
+          --color-indigo-600: oklch(0.511 0.262 276.966);
+          --color-indigo-700: oklch(0.457 0.24 277.023);
+          --color-purple-500: oklch(0.627 0.265 303.9);
+          --color-purple-600: oklch(0.558 0.288 302.321);
+          --color-purple-700: oklch(0.496 0.265 301.924);
+          --color-purple-800: oklch(0.438 0.218 303.724);
+          --color-fuchsia-600: oklch(0.591 0.293 322.896);
+          --color-fuchsia-700: oklch(0.518 0.253 323.949);
+          --color-pink-200: oklch(0.899 0.061 343.231);
+          --color-pink-300: oklch(0.823 0.12 346.018);
+          --color-pink-400: oklch(0.718 0.202 349.761);
+          --color-pink-500: oklch(0.656 0.241 354.308);
+          --color-pink-600: oklch(0.592 0.249 0.584);
+          --color-pink-700: oklch(0.525 0.223 3.958);
+          --color-pink-900: oklch(0.408 0.153 2.432);
+          --color-gray-200: oklch(0.928 0.006 264.531);
+          --color-gray-300: oklch(0.872 0.01 258.338);
+          --color-white: #fff;
+          --spacing: 0.25rem;
+          --container-md: 28rem;
+          --text-xs: 0.75rem;
+          --text-xs--line-height: calc(1 / 0.75);
+          --text-sm: 0.875rem;
+          --text-sm--line-height: calc(1.25 / 0.875);
+          --text-lg: 1.125rem;
+          --text-lg--line-height: calc(1.75 / 1.125);
+          --text-xl: 1.25rem;
+          --text-xl--line-height: calc(1.75 / 1.25);
+          --text-2xl: 1.5rem;
+          --text-2xl--line-height: calc(2 / 1.5);
+          --text-4xl: 2.25rem;
+          --text-4xl--line-height: calc(2.5 / 2.25);
+          --text-6xl: 3.75rem;
+          --text-6xl--line-height: 1;
+          --font-weight-semibold: 600;
+          --font-weight-bold: 700;
+          --radius-lg: 0.5rem;
+          --radius-xl: 0.75rem;
+          --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          --default-transition-duration: 150ms;
+          --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          --default-font-family: var(--font-sans);
+          --default-mono-font-family: var(--font-mono);
+        }
+      }
+      @layer base {
+        *,
+        ::after,
+        ::before,
+        ::backdrop,
+        ::file-selector-button {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          border: 0 solid;
+        }
+        html,
+        :host {
+          line-height: 1.5;
+          -webkit-text-size-adjust: 100%;
+          tab-size: 4;
+          font-family: var(
+            --default-font-family,
+            ui-sans-serif,
+            system-ui,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji"
+          );
+          font-feature-settings: var(--default-font-feature-settings, normal);
+          font-variation-settings: var(
+            --default-font-variation-settings,
+            normal
+          );
+          -webkit-tap-highlight-color: transparent;
+        }
+        hr {
+          height: 0;
+          color: inherit;
+          border-top-width: 1px;
+        }
+        abbr:where([title]) {
+          -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        a {
+          color: inherit;
+          -webkit-text-decoration: inherit;
+          text-decoration: inherit;
+        }
+        b,
+        strong {
+          font-weight: bolder;
+        }
+        code,
+        kbd,
+        samp,
+        pre {
+          font-family: var(
+            --default-mono-font-family,
+            ui-monospace,
+            SFMono-Regular,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Liberation Mono",
+            "Courier New",
+            monospace
+          );
+          font-feature-settings: var(
+            --default-mono-font-feature-settings,
+            normal
+          );
+          font-variation-settings: var(
+            --default-mono-font-variation-settings,
+            normal
+          );
+          font-size: 1em;
+        }
+        small {
+          font-size: 80%;
+        }
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+        sub {
+          bottom: -0.25em;
+        }
+        sup {
+          top: -0.5em;
+        }
+        table {
+          text-indent: 0;
+          border-color: inherit;
+          border-collapse: collapse;
+        }
+        :-moz-focusring {
+          outline: auto;
+        }
+        progress {
+          vertical-align: baseline;
+        }
+        summary {
+          display: list-item;
+        }
+        ol,
+        ul,
+        menu {
+          list-style: none;
+        }
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+          display: block;
+          vertical-align: middle;
+        }
+        img,
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+        button,
+        input,
+        select,
+        optgroup,
+        textarea,
+        ::file-selector-button {
+          font: inherit;
+          font-feature-settings: inherit;
+          font-variation-settings: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          border-radius: 0;
+          background-color: transparent;
+          opacity: 1;
+        }
+        :where(select:is([multiple], [size])) optgroup {
+          font-weight: bolder;
+        }
+        :where(select:is([multiple], [size])) optgroup option {
+          padding-inline-start: 20px;
+        }
+        ::file-selector-button {
+          margin-inline-end: 4px;
+        }
+        ::placeholder {
+          opacity: 1;
+        }
+        @supports (not (-webkit-appearance: -apple-pay-button)) or
+          (contain-intrinsic-size: 1px) {
+          ::placeholder {
+            color: color-mix(in oklab, currentColor 50%, transparent);
+          }
+        }
+        textarea {
+          resize: vertical;
+        }
+        ::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
+        ::-webkit-date-and-time-value {
+          min-height: 1lh;
+          text-align: inherit;
+        }
+        ::-webkit-datetime-edit {
+          display: inline-flex;
+        }
+        ::-webkit-datetime-edit-fields-wrapper {
+          padding: 0;
+        }
+        ::-webkit-datetime-edit,
+        ::-webkit-datetime-edit-year-field,
+        ::-webkit-datetime-edit-month-field,
+        ::-webkit-datetime-edit-day-field,
+        ::-webkit-datetime-edit-hour-field,
+        ::-webkit-datetime-edit-minute-field,
+        ::-webkit-datetime-edit-second-field,
+        ::-webkit-datetime-edit-millisecond-field,
+        ::-webkit-datetime-edit-meridiem-field {
+          padding-block: 0;
+        }
+        :-moz-ui-invalid {
+          box-shadow: none;
+        }
+        button,
+        input:where([type="button"], [type="reset"], [type="submit"]),
+        ::file-selector-button {
+          appearance: button;
+        }
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          height: auto;
+        }
+        [hidden]:where(:not([hidden="until-found"])) {
+          display: none !important;
+        }
+      }
+      @layer utilities {
+        .pointer-events-none {
+          pointer-events: none;
+        }
+        .absolute {
+          position: absolute;
+        }
+        .fixed {
+          position: fixed;
+        }
+        .relative {
+          position: relative;
+        }
+        .inset-0 {
+          inset: calc(var(--spacing) * 0);
+        }
+        .top-1\/2 {
+          top: calc(1 / 2 * 100%);
+        }
+        .right-0 {
+          right: calc(var(--spacing) * 0);
+        }
+        .right-4 {
+          right: calc(var(--spacing) * 4);
+        }
+        .right-8 {
+          right: calc(var(--spacing) * 8);
+        }
+        .bottom-0 {
+          bottom: calc(var(--spacing) * 0);
+        }
+        .bottom-24 {
+          bottom: calc(var(--spacing) * 24);
+        }
+        .left-0 {
+          left: calc(var(--spacing) * 0);
+        }
+        .left-4 {
+          left: calc(var(--spacing) * 4);
+        }
+        .z-10 {
+          z-index: 10;
+        }
+        .z-40 {
+          z-index: 40;
+        }
+        .container {
+          width: 100%;
+          @media (width >= 40rem) {
+            max-width: 40rem;
+          }
+          @media (width >= 48rem) {
+            max-width: 48rem;
+          }
+          @media (width >= 64rem) {
+            max-width: 64rem;
+          }
+          @media (width >= 80rem) {
+            max-width: 80rem;
+          }
+          @media (width >= 96rem) {
+            max-width: 96rem;
+          }
+        }
+        .mx-auto {
+          margin-inline: auto;
+        }
+        .my-8 {
+          margin-block: calc(var(--spacing) * 8);
+        }
+        .mt-2 {
+          margin-top: calc(var(--spacing) * 2);
+        }
+        .mt-3 {
+          margin-top: calc(var(--spacing) * 3);
+        }
+        .mt-4 {
+          margin-top: calc(var(--spacing) * 4);
+        }
+        .mt-8 {
+          margin-top: calc(var(--spacing) * 8);
+        }
+        .mr-2 {
+          margin-right: calc(var(--spacing) * 2);
+        }
+        .mb-2 {
+          margin-bottom: calc(var(--spacing) * 2);
+        }
+        .mb-3 {
+          margin-bottom: calc(var(--spacing) * 3);
+        }
+        .mb-4 {
+          margin-bottom: calc(var(--spacing) * 4);
+        }
+        .mb-16 {
+          margin-bottom: calc(var(--spacing) * 16);
+        }
+        .block {
+          display: block;
+        }
+        .flex {
+          display: flex;
+        }
+        .hidden {
+          display: none;
+        }
+        .inline-block {
+          display: inline-block;
+        }
+        .h-80 {
+          height: calc(var(--spacing) * 80);
+        }
+        .h-full {
+          height: 100%;
+        }
+        .w-64 {
+          width: calc(var(--spacing) * 64);
+        }
+        .w-full {
+          width: 100%;
+        }
+        .max-w-md {
+          max-width: var(--container-md);
+        }
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+        .-translate-y-1\/2 {
+          --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+        .transform {
+          transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
+            var(--tw-skew-x) var(--tw-skew-y);
+        }
+        .animate-pulse {
+          animation: var(--animate-pulse);
+        }
+        .snap-x {
+          scroll-snap-type: x var(--tw-scroll-snap-strictness);
+        }
+        .snap-mandatory {
+          --tw-scroll-snap-strictness: mandatory;
+        }
+        .snap-center {
+          scroll-snap-align: center;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .space-x-8 {
+          :where(& > :not(:last-child)) {
+            --tw-space-x-reverse: 0;
+            margin-inline-start: calc(
+              calc(var(--spacing) * 8) * var(--tw-space-x-reverse)
+            );
+            margin-inline-end: calc(
+              calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse))
+            );
+          }
+        }
+        .overflow-hidden {
+          overflow: hidden;
+        }
+        .overflow-x-auto {
+          overflow-x: auto;
+        }
+        .overflow-x-hidden {
+          overflow-x: hidden;
+        }
+        .rounded {
+          border-radius: 0.25rem;
+        }
+        .rounded-full {
+          border-radius: calc(infinity * 1px);
+        }
+        .rounded-lg {
+          border-radius: var(--radius-lg);
+        }
+        .rounded-xl {
+          border-radius: var(--radius-xl);
+        }
+        .bg-pink-900 {
+          background-color: var(--color-pink-900);
+        }
+        .bg-gradient-to-br {
+          --tw-gradient-position: to bottom right in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-r {
+          --tw-gradient-position: to right in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-t {
+          --tw-gradient-position: to top in oklab;
+          background-image: linear-gradient(var(--tw-gradient-stops));
+        }
+        .from-pink-400 {
+          --tw-gradient-from: var(--color-pink-400);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-500 {
+          --tw-gradient-from: var(--color-pink-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-600 {
+          --tw-gradient-from: var(--color-pink-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-700 {
+          --tw-gradient-from: var(--color-pink-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-pink-900 {
+          --tw-gradient-from: var(--color-pink-900);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-purple-500 {
+          --tw-gradient-from: var(--color-purple-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .from-purple-600 {
+          --tw-gradient-from: var(--color-purple-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .via-fuchsia-600 {
+          --tw-gradient-via: var(--color-fuchsia-600);
+          --tw-gradient-via-stops: var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-via) var(--tw-gradient-via-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-via-stops);
+        }
+        .via-purple-800 {
+          --tw-gradient-via: var(--color-purple-800);
+          --tw-gradient-via-stops: var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-via) var(--tw-gradient-via-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-via-stops);
+        }
+        .to-fuchsia-600 {
+          --tw-gradient-to: var(--color-fuchsia-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-fuchsia-700 {
+          --tw-gradient-to: var(--color-fuchsia-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-indigo-600 {
+          --tw-gradient-to: var(--color-indigo-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-indigo-700 {
+          --tw-gradient-to: var(--color-indigo-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-pink-500 {
+          --tw-gradient-to: var(--color-pink-500);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-pink-700 {
+          --tw-gradient-to: var(--color-pink-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-600 {
+          --tw-gradient-to: var(--color-purple-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-700 {
+          --tw-gradient-to: var(--color-purple-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-purple-800 {
+          --tw-gradient-to: var(--color-purple-800);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-red-600 {
+          --tw-gradient-to: var(--color-red-600);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-red-700 {
+          --tw-gradient-to: var(--color-red-700);
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .to-transparent {
+          --tw-gradient-to: transparent;
+          --tw-gradient-stops: var(
+            --tw-gradient-via-stops,
+            var(--tw-gradient-position),
+            var(--tw-gradient-from) var(--tw-gradient-from-position),
+            var(--tw-gradient-to) var(--tw-gradient-to-position)
+          );
+        }
+        .bg-clip-text {
+          background-clip: text;
+        }
+        .object-cover {
+          object-fit: cover;
+        }
+        .p-3 {
+          padding: calc(var(--spacing) * 3);
+        }
+        .p-4 {
+          padding: calc(var(--spacing) * 4);
+        }
+        .p-5 {
+          padding: calc(var(--spacing) * 5);
+        }
+        .p-6 {
+          padding: calc(var(--spacing) * 6);
+        }
+        .px-4 {
+          padding-inline: calc(var(--spacing) * 4);
+        }
+        .px-6 {
+          padding-inline: calc(var(--spacing) * 6);
+        }
+        .px-8 {
+          padding-inline: calc(var(--spacing) * 8);
+        }
+        .py-2 {
+          padding-block: calc(var(--spacing) * 2);
+        }
+        .py-3 {
+          padding-block: calc(var(--spacing) * 3);
+        }
+        .py-6 {
+          padding-block: calc(var(--spacing) * 6);
+        }
+        .py-8 {
+          padding-block: calc(var(--spacing) * 8);
+        }
+        .text-center {
+          text-align: center;
+        }
+        .font-\[\'Caveat\'\] {
+          font-family: "Caveat";
+        }
+        .text-2xl {
+          font-size: var(--text-2xl);
+          line-height: var(--tw-leading, var(--text-2xl--line-height));
+        }
+        .text-4xl {
+          font-size: var(--text-4xl);
+          line-height: var(--tw-leading, var(--text-4xl--line-height));
+        }
+        .text-lg {
+          font-size: var(--text-lg);
+          line-height: var(--tw-leading, var(--text-lg--line-height));
+        }
+        .text-sm {
+          font-size: var(--text-sm);
+          line-height: var(--tw-leading, var(--text-sm--line-height));
+        }
+        .text-xl {
+          font-size: var(--text-xl);
+          line-height: var(--tw-leading, var(--text-xl--line-height));
+        }
+        .text-xs {
+          font-size: var(--text-xs);
+          line-height: var(--tw-leading, var(--text-xs--line-height));
+        }
+        .font-bold {
+          --tw-font-weight: var(--font-weight-bold);
+          font-weight: var(--font-weight-bold);
+        }
+        .font-semibold {
+          --tw-font-weight: var(--font-weight-semibold);
+          font-weight: var(--font-weight-semibold);
+        }
+        .text-gray-200 {
+          color: var(--color-gray-200);
+        }
+        .text-gray-300 {
+          color: var(--color-gray-300);
+        }
+        .text-pink-200 {
+          color: var(--color-pink-200);
+        }
+        .text-pink-300 {
+          color: var(--color-pink-300);
+        }
+        .text-transparent {
+          color: transparent;
+        }
+        .text-white {
+          color: var(--color-white);
+        }
+        .italic {
+          font-style: italic;
+        }
+        .opacity-70 {
+          opacity: 70%;
+        }
+        .shadow-2xl {
+          --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .shadow-lg {
+          --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+            0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .transition {
+          transition-property: color, background-color, border-color,
+            outline-color, text-decoration-color, fill, stroke,
+            --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity,
+            box-shadow, transform, translate, scale, rotate, filter,
+            -webkit-backdrop-filter, backdrop-filter;
+          transition-timing-function: var(
+            --tw-ease,
+            var(--default-transition-timing-function)
+          );
+          transition-duration: var(
+            --tw-duration,
+            var(--default-transition-duration)
+          );
+        }
+        .hover\:scale-105 {
+          &:hover {
+            @media (hover: hover) {
+              --tw-scale-x: 105%;
+              --tw-scale-y: 105%;
+              --tw-scale-z: 105%;
+              scale: var(--tw-scale-x) var(--tw-scale-y);
+            }
+          }
+        }
+        .hover\:shadow-lg {
+          &:hover {
+            @media (hover: hover) {
+              --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 /
+                        0.1)),
+                0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+              box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+                var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+                var(--tw-shadow);
+            }
+          }
+        }
+        .md\:right-12 {
+          @media (width >= 48rem) {
+            right: calc(var(--spacing) * 12);
+          }
+        }
+        .md\:block {
+          @media (width >= 48rem) {
+            display: block;
+          }
+        }
+        .md\:text-6xl {
+          @media (width >= 48rem) {
+            font-size: var(--text-6xl);
+            line-height: var(--tw-leading, var(--text-6xl--line-height));
+          }
+        }
+        .md\:text-xl {
+          @media (width >= 48rem) {
+            font-size: var(--text-xl);
+            line-height: var(--tw-leading, var(--text-xl--line-height));
+          }
+        }
+      }
+      @property --tw-translate-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-translate-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-translate-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-rotate-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateX(0);
+      }
+      @property --tw-rotate-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateY(0);
+      }
+      @property --tw-rotate-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: rotateZ(0);
+      }
+      @property --tw-skew-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: skewX(0);
+      }
+      @property --tw-skew-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: skewY(0);
+      }
+      @property --tw-scroll-snap-strictness {
+        syntax: "*";
+        inherits: false;
+        initial-value: proximity;
+      }
+      @property --tw-space-x-reverse {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0;
+      }
+      @property --tw-gradient-position {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-from {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-via {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-to {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: #0000;
+      }
+      @property --tw-gradient-stops {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-via-stops {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-gradient-from-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 0%;
+      }
+      @property --tw-gradient-via-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 50%;
+      }
+      @property --tw-gradient-to-position {
+        syntax: "<length-percentage>";
+        inherits: false;
+        initial-value: 100%;
+      }
+      @property --tw-font-weight {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-shadow-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-inset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-inset-shadow-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-inset-ring-color {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-inset-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-ring-inset {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-ring-offset-width {
+        syntax: "<length>";
+        inherits: false;
+        initial-value: 0px;
+      }
+      @property --tw-ring-offset-color {
+        syntax: "*";
+        inherits: false;
+        initial-value: #fff;
+      }
+      @property --tw-ring-offset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+      }
+      @property --tw-scale-x {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @property --tw-scale-y {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @property --tw-scale-z {
+        syntax: "*";
+        inherits: false;
+        initial-value: 1;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+    <style>
+      /* Enhanced Romantic Animations */
+      @keyframes gentleGlow {
+        0% {
+          box-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+        }
+        100% {
+          box-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+        }
+      }
+
+      @keyframes floatHeart {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-15px) rotate(-5deg);
+        }
+        75% {
+          transform: translateY(-5px) rotate(5deg);
+        }
+      }
+
+      @keyframes pulseHeart {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes fadeInLove {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Enhanced Mirror Effect with Romantic Glow */
+      .mirror-effect {
+        transform: rotateY(180deg);
+        animation: mirror-appear 0.5s forwards;
+        background: linear-gradient(
+          to right,
+          rgba(255, 192, 203, 0.3),
+          rgba(255, 182, 193, 0.2)
+        );
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 192, 203, 0.4);
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      }
+
+      @keyframes mirror-appear {
+        0% {
+          transform: rotateY(180deg) scale(0.5);
+          opacity: 0;
+        }
+        50% {
+          transform: rotateY(180deg) scale(1.1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: rotateY(180deg) scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Enhanced Card Animation with Romantic Flair */
+      .memory-card {
+        perspective: 1000px;
+        transition: transform 0.5s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .memory-card:hover {
+        animation: gentleGlow 2s infinite;
+        transform: translateY(-5px);
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .memory-card.flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+      }
+
+      .card-front::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 192, 203, 0.2),
+          rgba(255, 105, 180, 0.3)
+        );
+        pointer-events: none;
+      }
+
+      .card-back {
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        font-family: "Caveat", cursive;
+        font-size: 1.25rem;
+        line-height: 1.6;
+      }
+
+      /* Gallery Scroll Enhanced */
+      .gallery-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding: 1.5rem 0;
+      }
+
+      .gallery-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Heart Button Animation */
+      .surprise-btn {
+        animation: pulseHeart 2s infinite;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+      }
+
+      .surprise-btn:hover {
+        animation: floatHeart 1s infinite;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+      }
+
+      /* Continue Button Animation */
+      .continue-btn {
+        animation: gentleGlow 3s infinite;
+        transition: all 0.5s ease;
+      }
+
+      .continue-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+      }
+
+      /* Popup Styles with Romantic Flair */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+        animation: fadeInLove 0.7s;
+        box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+      }
+
+      /* Enhanced Romantic Background */
+      body {
+        background: linear-gradient(
+          135deg,
+         #c5adc5 100%,
+         #b2b5e0 50%
+        
+        );
+        min-height: 100vh;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Floating hearts particles */
+      .heart-particle {
+        position: absolute;
+        animation: floatHeart 15s infinite ease-in-out;
+        opacity: 0.6;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-40px) translateX(20px) rotate(10deg);
+        }
+        50% {
+          transform: translateY(0) translateX(40px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(40px) translateX(20px) rotate(-10deg);
+        }
+      }
+
+      /* Page title animation */
+      .title-gradient {
+        background-size: 200% auto;
+        background-image: linear-gradient(
+          to right,
+          #ff69b4 0%,
+          #da70d6 25%,
+          #ff1493 50%,
+          #da70d6 75%,
+          #ff69b4 100%
+        );
+        animation: gradientMove 3s linear infinite;
+      }
+
+      @keyframes gradientMove {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      /* Memory card border glow */
+      .card-glow {
+        box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+        transition: all 0.5s ease;
+      }
+
+      .card-glow:hover {
+        box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+      }
+
+      /* Image overlay effect */
+      .image-overlay {
+        transition: all 0.3s ease;
+      }
+
+      .memory-card:hover .image-overlay {
+        background: rgba(255, 105, 180, 0.2);
+      }
+    </style>
+  </head>
+  <body class="text-white overflow-x-hidden">
+    <!-- Font imports for romantic styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;family=Caveat:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Floating heart particles -->
+    <div class="absolute w-full h-full overflow-hidden pointer-events-none">
+      <div
+        class="heart-particle"
+        style="top: 10%; left: 5%; animation-delay: 0s"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="#ffb6c1"
+          style="opacity: 0.7"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="heart-particle"
+        style="top: 20%; left: 80%; animation-delay: 2s"
+      >
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="#ff69b4"
+          style="opacity: 0.6"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="heart-particle"
+        style="top: 50%; left: 10%; animation-delay: 4s"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="#ff1493"
+          style="opacity: 0.8"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="heart-particle"
+        style="top: 70%; left: 70%; animation-delay: 6s"
+      >
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="#c71585"
+          style="opacity: 0.5"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="heart-particle"
+        style="top: 30%; left: 30%; animation-delay: 8s"
+      >
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="#db7093"
+          style="opacity: 0.7"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="heart-particle"
+        style="top: 80%; left: 20%; animation-delay: 10s"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="#ff69b4"
+          style="opacity: 0.6"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Romantic Page Header -->
+    <header class="container mx-auto px-4 py-8 text-center relative z-10">
+      <h1
+        class="text-4xl md:text-6xl font-bold mb-3 text-transparent bg-clip-text title-gradient font-['Caveat']"
+      >
+        Our Memories
+      </h1>
+      <p class="text-lg md:text-xl text-white">
+        Journey through the special moments we've shared together ♥
+      </p>
+      
+      <div class="flex justify-center mt-3">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="#ff69b4"
+          class="animate-pulse"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+    </header>
+    <p style="text-align: center;" class="text-lg md:text-xl text-white">
+        Click on the image 
+      </p>
+    <!-- Enhanced Memory Card Gallery -->
+    <div class="relative w-full my-8">
+      <div
+        class="gallery-container flex overflow-x-auto py-8 px-4 space-x-8 snap-x snap-mandatory w-full"
+        id="memoryGallery"
+      >
+        <!-- Memory Card 1 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-400 to-purple-600 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="img.1.jpg"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+                    Sudden meet
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-500 to-purple-700 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+                It was the last day of our intermediate, and we met suddenly and  That day became one more special memory in the story
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 2 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-500 to-indigo-600 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="bday.jpg"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+                    Birthday
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-600 to-indigo-700 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+                I came to the restaurant just to gift you something. But those few minutes were unforgettable.
+                You stood there in that dress, looking like an angel, and that moment feels so special for me
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 3 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-400 to-purple-700 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="bdy.jpg"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+                    Vampire Dairies
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-500 to-purple-800 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+                your hype made me check out The Vampire Diaries — and damn, that show’s a total banger!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 4 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-500 to-red-600 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="pic4.jpg"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+                    college
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-600 to-red-700 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+              
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 5 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-400 to-fuchsia-600 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="hm.png"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+                    Fake House
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-500 to-fuchsia-700 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+                "The night you surprised me with a kiss under the full moon. My
+                heart still skips a beat remembering it."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 6 -->
+        <div
+          class="memory-card flex-shrink-0 w-64 h-80 snap-center card-glow rounded-xl"
+        >
+          <div class="card-inner w-full h-full">
+            <div
+              class="card-front bg-gradient-to-br from-pink-500 to-purple-600 p-3 flex items-center justify-center"
+            >
+              <div class="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src="pic6.jpg"
+                  alt="Memory"
+                  class="w-full h-full object-cover"
+                />
+                <div class="image-overlay absolute inset-0"></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-pink-900 to-transparent p-3"
+                >
+                  <h3 class="text-xl font-semibold font-['Caveat']">
+              
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-back bg-gradient-to-br from-pink-600 to-purple-700 flex items-center justify-center text-center"
+            >
+              <p class="text-xl">
+                "Walking barefoot on the shore, counting waves and making
+                promises that would last longer than footprints in the sand."
+              </p>
+            </div>
+          </div>
+        </div>
+
+       
+      <!-- Gallery Navigation Hearts -->
+      <div
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 text-4xl text-pink-300 opacity-70 hidden md:block"
+      >
+        ❤
+      </div>
+      <div
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-4xl text-pink-300 opacity-70 hidden md:block"
+      >
+        ❤
+      </div>
+    </div>
+
+    <!-- Heart-shaped Surprise Button -->
+<div class="fixed bottom-24 right-8 md:right-12 z-40">
+  <a href="message.html">
+    <button
+      class="surprise-btn bg-gradient-to-r from-pink-500 via-fuchsia-600 to-pink-500 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition"
+    >
+      <span class="flex items-center">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="white"
+          class="mr-2"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+        Sweet Surprise
+      </span>
+    </button>
+  </a>
+</div>
+    <!-- Continue Journey Button -->
+    <div class="text-center py-8 mb-16 relative z-10">
+      <button
+        class="continue-btn bg-gradient-to-r from-pink-500 via-fuchsia-600 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg"
+        onclick="window.location.href='q.html'"
+      >
+        Continue Our Journey
+      </button>
+      <p class="text-sm text-pink-200 mt-3 font-['Caveat'] text-xl">
+        Let's have some fun dude...
+      </p>
+    </div>
+
+    <!-- Page Footer with Heart Animation -->
+    <footer class="container mx-auto px-4 py-6 text-center text-pink-200 mt-8">
+      <div class="mb-4">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="#ff69b4"
+          class="inline-block animate-pulse"
+        >
+          <path
+            d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+          ></path>
+        </svg>
+      </div>
+      <p class="font-['Caveat'] text-xl">Forever and Always</p>
+      <p class="text-xs mt-2 text-pink-300">Created with love, for you</p>
+    </footer>
+
+    <!-- JavaScript for enhanced interactions -->
+    <script>
+      // Flip memory cards when clicked
+      document.querySelectorAll(".memory-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("flipped");
+        });
+      });
+
+      // Popup functionality
+      const popups = [
+        "voiceNotePopup",
+        "memePopup",
+        "challengePopup",
+        "poemPopup",
+      ];
+      let currentPopupIndex = 0;
+
+      document.querySelector(".surprise-btn").addEventListener("click", () => {
+        // Show a random popup
+        const randomIndex = Math.floor(Math.random() * popups.length);
+        document.getElementById(popups[randomIndex]).style.display = "block";
+      });
+
+      // Close popup buttons
+      document.querySelectorAll(".close-popup").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.target.closest(".popup").style.display = "none";
+        });
+      });
+
+      // Continue journey button
+      document.querySelector(".continue-btn").addEventListener("click", () => {
+        // Add smooth scroll to gallery
+        document.getElementById("memoryGallery").scrollLeft += 300;
+
+        // Add heart burst animation
+        createHeartBurst();
+      });
+
+      // Heart burst animation
+      function createHeartBurst() {
+        const container = document.querySelector("body");
+        for (let i = 0; i < 15; i++) {
+          setTimeout(() => {
+            const heart = document.createElement("div");
+            heart.classList.add("heart-particle");
+            heart.style.position = "fixed";
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.top = `${Math.random() * 100}%`;
+            heart.style.animation = `floatHeart ${
+              5 + Math.random() * 10
+            }s linear`;
+            heart.style.opacity = "0";
+            heart.innerHTML = `<svg width="${
+              20 + Math.random() * 20
+            }" height="${
+              20 + Math.random() * 20
+            }" viewBox="0 0 24 24" fill="${getRandomPink()}" style="opacity: ${
+              0.3 + Math.random() * 0.7
+            };">
+                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                    </svg>`;
+
+            container.appendChild(heart);
+
+            // Animate in
+            setTimeout(() => (heart.style.opacity = "1"), 10);
+
+            // Remove after animation completes
+            setTimeout(() => {
+              heart.style.opacity = "0";
+              setTimeout(() => heart.remove(), 1000);
+            }, 4000);
+          }, i * 100);
+        }
+      }
+
+      // Helper function to get random pink color
+      function getRandomPink() {
+        const pinks = ["#ff69b4", "#ff1493", "#db7093", "#c71585", "#ffb6c1"];
+        return pinks[Math.floor(Math.random() * pinks.length)];
+      }
+
+      // Add a few floating hearts on page load
+      window.addEventListener("load", () => {
+        setTimeout(createHeartBurst, 1000);
+
+        // Auto scroll navigation for gallery
+        const gallery = document.getElementById("memoryGallery");
+        let scrollInterval;
+
+        // Auto scroll on hover
+        gallery.addEventListener("mouseover", () => {
+          // Clear any existing interval
+          clearInterval(scrollInterval);
+
+          // Determine scroll direction based on mouse position
+          gallery.addEventListener("mousemove", (e) => {
+            const galleryRect = gallery.getBoundingClientRect();
+            const galleryWidth = galleryRect.width;
+            const mouseX = e.clientX - galleryRect.left;
+
+            // If mouse is in the right third of the gallery, scroll right
+            if (mouseX > galleryWidth * 0.7) {
+              clearInterval(scrollInterval);
+              scrollInterval = setInterval(() => {
+                gallery.scrollLeft += 2;
+              }, 16);
+            }
+            // If mouse is in the left third of the gallery, scroll left
+            else if (mouseX < galleryWidth * 0.3) {
+              clearInterval(scrollInterval);
+              scrollInterval = setInterval(() => {
+                gallery.scrollLeft -= 2;
+              }, 16);
+            }
+            // Otherwise, stop scrolling
+            else {
+              clearInterval(scrollInterval);
+            }
+          });
+        });
+
+        // Stop auto scroll when mouse leaves
+        gallery.addEventListener("mouseleave", () => {
+          clearInterval(scrollInterval);
+        });
+      });
+    </script>
+  </body>
+</html>

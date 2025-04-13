@@ -1,0 +1,2612 @@
+<head>
+<meta charset="UTF-8" />
+
+<title>Welcome to Our Chronicles</title>
+<link
+  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Montserrat:wght@500;700&amp;family=Pacifico&amp;display=swap"
+  rel="stylesheet"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  /*! tailwindcss v4.0.15 | MIT License | https://tailwindcss.com */
+  @layer theme, base, components, utilities;
+  @layer theme {
+    :root,
+    :host {
+      --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      --color-pink-300: oklch(0.823 0.12 346.018);
+      --color-white: #fff;
+      --spacing: 0.25rem;
+      --container-4xl: 56rem;
+      --text-xl: 1.25rem;
+      --text-xl--line-height: calc(1.75 / 1.25);
+      --text-2xl: 1.5rem;
+      --text-2xl--line-height: calc(2 / 1.5);
+      --text-5xl: 3rem;
+      --text-5xl--line-height: 1;
+      --text-6xl: 3.75rem;
+      --text-6xl--line-height: 1;
+      --font-weight-bold: 700;
+      --default-font-family: var(--font-sans);
+      --default-mono-font-family: var(--font-mono);
+    }
+  }
+  @layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0 solid;
+    }
+    html,
+    :host {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      tab-size: 4;
+      font-family: var(
+        --default-font-family,
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji"
+      );
+      font-feature-settings: var(--default-font-feature-settings, normal);
+      font-variation-settings: var(--default-font-variation-settings, normal);
+      -webkit-tap-highlight-color: transparent;
+    }
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px;
+    }
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    a {
+      color: inherit;
+      -webkit-text-decoration: inherit;
+      text-decoration: inherit;
+    }
+    b,
+    strong {
+      font-weight: bolder;
+    }
+    code,
+    kbd,
+    samp,
+    pre {
+      font-family: var(
+        --default-mono-font-family,
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace
+      );
+      font-feature-settings: var(
+        --default-mono-font-feature-settings,
+        normal
+      );
+      font-variation-settings: var(
+        --default-mono-font-variation-settings,
+        normal
+      );
+      font-size: 1em;
+    }
+    small {
+      font-size: 80%;
+    }
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+    sub {
+      bottom: -0.25em;
+    }
+    sup {
+      top: -0.5em;
+    }
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse;
+    }
+    :-moz-focusring {
+      outline: auto;
+    }
+    progress {
+      vertical-align: baseline;
+    }
+    summary {
+      display: list-item;
+    }
+    ol,
+    ul,
+    menu {
+      list-style: none;
+    }
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+      display: block;
+      vertical-align: middle;
+    }
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+    button,
+    input,
+    select,
+    optgroup,
+    textarea,
+    ::file-selector-button {
+      font: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      border-radius: 0;
+      background-color: transparent;
+      opacity: 1;
+    }
+    :where(select:is([multiple], [size])) optgroup {
+      font-weight: bolder;
+    }
+    :where(select:is([multiple], [size])) optgroup option {
+      padding-inline-start: 20px;
+    }
+    ::file-selector-button {
+      margin-inline-end: 4px;
+    }
+    ::placeholder {
+      opacity: 1;
+    }
+    @supports (not (-webkit-appearance: -apple-pay-button)) or
+      (contain-intrinsic-size: 1px) {
+      ::placeholder {
+        color: color-mix(in oklab, currentColor 50%, transparent);
+      }
+    }
+    textarea {
+      resize: vertical;
+    }
+    ::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+    ::-webkit-date-and-time-value {
+      min-height: 1lh;
+      text-align: inherit;
+    }
+    ::-webkit-datetime-edit {
+      display: inline-flex;
+    }
+    ::-webkit-datetime-edit-fields-wrapper {
+      padding: 0;
+    }
+    ::-webkit-datetime-edit,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field,
+    ::-webkit-datetime-edit-day-field,
+    ::-webkit-datetime-edit-hour-field,
+    ::-webkit-datetime-edit-minute-field,
+    ::-webkit-datetime-edit-second-field,
+    ::-webkit-datetime-edit-millisecond-field,
+    ::-webkit-datetime-edit-meridiem-field {
+      padding-block: 0;
+    }
+    :-moz-ui-invalid {
+      box-shadow: none;
+    }
+    button,
+    input:where([type="button"], [type="reset"], [type="submit"]),
+    ::file-selector-button {
+      appearance: button;
+    }
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto;
+    }
+    [hidden]:where(:not([hidden="until-found"])) {
+      display: none !important;
+    }
+  }
+  @layer utilities {
+    .relative {
+      position: relative;
+    }
+    .z-10 {
+      z-index: 10;
+    }
+    .mb-6 {
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+    .ml-2 {
+      margin-left: calc(var(--spacing) * 2);
+    }
+    .flex {
+      display: flex;
+    }
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    .max-w-4xl {
+      max-width: var(--container-4xl);
+    }
+    .flex-col {
+      flex-direction: column;
+    }
+    .items-center {
+      align-items: center;
+    }
+    .justify-center {
+      justify-content: center;
+    }
+    .overflow-hidden {
+      overflow: hidden;
+    }
+    .rounded-full {
+      border-radius: calc(infinity * 1px);
+    }
+    .p-4 {
+      padding: calc(var(--spacing) * 4);
+    }
+    .px-16 {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+    .py-5 {
+      padding-block: calc(var(--spacing) * 5);
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+    .text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+    .font-bold {
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
+    }
+    .text-pink-300 {
+      color: var(--color-pink-300);
+    }
+    .text-white {
+      color: var(--color-white);
+    }
+    .shadow-lg {
+      --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+        0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+        var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+    .md\:text-2xl {
+      @media (width >= 48rem) {
+        font-size: var(--text-2xl);
+        line-height: var(--tw-leading, var(--text-2xl--line-height));
+      }
+    }
+    .md\:text-6xl {
+      @media (width >= 48rem) {
+        font-size: var(--text-6xl);
+        line-height: var(--tw-leading, var(--text-6xl--line-height));
+      }
+    }
+  }
+  @property --tw-font-weight {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+  }
+  @property --tw-shadow-color {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-inset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+  }
+  @property --tw-inset-shadow-color {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-ring-color {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+  }
+  @property --tw-inset-ring-color {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-inset-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+  }
+  @property --tw-ring-inset {
+    syntax: "*";
+    inherits: false;
+  }
+  @property --tw-ring-offset-width {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+  }
+  @property --tw-ring-offset-color {
+    syntax: "*";
+    inherits: false;
+    initial-value: #fff;
+  }
+  @property --tw-ring-offset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+  }
+</style>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
+    25% {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+    }
+    40% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
+    60% {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .sticker {
+    position: absolute;
+    font-size: 32px;
+    animation: float 6s infinite ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .sticker:hover {
+    transform: scale(1.3);
+  }
+
+  .message {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(255, 105, 180, 0.4);
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    display: none;
+    z-index: 20;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    color: #d33682;
+    max-width: 200px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .start-button {
+    animation: heartbeat 3s infinite ease-in-out;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff3366, #ff6b6b, #ff3366);
+    background-size: 200% 200%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 auto; /* Center the button */
+    display: block; /* Make button a block element */
+  }
+
+  .start-button:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+  }
+
+  .start-button:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+  }
+
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  body {
+    overflow-x: hidden;
+    background: linear-gradient(
+      135deg,
+      #ff5f6d,
+     
+      #e975a8,
+      #8e2de2,
+      #4a00e0
+    
+    
+    );
+    background-size: 500% 500%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .bg-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .heart {
+    position: absolute;
+    opacity: 0.2;
+    animation: float 6s infinite ease-in-out;
+  }
+
+  .subtitle {
+    font-family: "Dancing Script", cursive;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: -10px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .title-container {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .title-container:before,
+  .title-container:after {
+    content: "💖";
+    position: absolute;
+    font-size: 40px;
+    animation: float 4s infinite ease-in-out alternate;
+  }
+
+  .title-container:before {
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .title-container:after {
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .sparkle-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+  }
+
+  .cloud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    z-index: 0;
+  }
+
+  /* New romantic elements */
+  .rose-petal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(ellipse at center, #ff3366 0%, #d42a59 100%);
+    border-radius: 50% 0 50% 50%;
+    opacity: 0.8;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+
+  .love-quote {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 18px;
+    opacity: 0.8;
+    max-width: 80%;
+  }
+
+  /* Enhanced main content card */
+  .content-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 105, 180, 0.2)
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+      0 0 20px rgba(255, 105, 180, 0.4);
+    border-radius: 30px;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 105, 180, 0.5);
+  }
+
+  /* Button container for better centering */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body
+class="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden"
+>
+<div
+  class="bg-layer"
+  id="bg-layer"
+  style="transform: translateX(-16.1px) translateY(16.75px)"
+>
+  <div
+    class="heart"
+    style="
+      left: 62.7454%;
+      top: 85.8599%;
+      font-size: 16.5488px;
+      animation-duration: 5.68566s;
+      animation-delay: 2.17639s;
+    "
+  >
+  💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 28.3285%;
+      top: 10.0152%;
+      font-size: 10.7736px;
+      animation-duration: 5.21155s;
+      animation-delay: 1.37946s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 62.7507%;
+      top: 23.9007%;
+      font-size: 14.5949px;
+      animation-duration: 4.89938s;
+      animation-delay: 0.571213s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 50.1249%;
+      top: 10.5599%;
+      font-size: 22.9315px;
+      animation-duration: 4.02703s;
+      animation-delay: 2.73985s;
+    "
+  >
+    💖
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 73.7911%;
+      top: 82.9638%;
+      font-size: 14.0289px;
+      animation-duration: 9.79752s;
+      animation-delay: 3.13281s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 0.977431%;
+      top: 12.4702%;
+      font-size: 21.038px;
+      animation-duration: 4.11475s;
+      animation-delay: 3.11869s;
+    "
+  >
+    💖
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 50.6013%;
+      top: 96.6512%;
+      font-size: 22.2943px;
+      animation-duration: 4.87817s;
+      animation-delay: 1.00305s;
+    "
+  >
+    💖
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 7.01941%;
+      top: 44.2837%;
+      font-size: 21.341px;
+      animation-duration: 4.00055s;
+      animation-delay: 0.248313s;
+    "
+  >
+    💖
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 39.1771%;
+      top: 30.6775%;
+      font-size: 27.4699px;
+      animation-duration: 7.52804s;
+      animation-delay: 3.8718s;
+    "
+  >
+    💖
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 47.1728%;
+      top: 40.7487%;
+      font-size: 16.9239px;
+      animation-duration: 4.89147s;
+      animation-delay: 4.13921s;
+    "
+  >
+    💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 57.7527%;
+      top: 20.1025%;
+      font-size: 28.6672px;
+      animation-duration: 9.37842s;
+      animation-delay: 2.5038s;
+    "
+  >
+    💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 60.5034%;
+      top: 22.0849%;
+      font-size: 11.7175px;
+      animation-duration: 6.15679s;
+      animation-delay: 2.82125s;
+    "
+  >
+    💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 54.1402%;
+      top: 56.8414%;
+      font-size: 19.8894px;
+      animation-duration: 5.60397s;
+      animation-delay: 3.37416s;
+    "
+  >
+    💘
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 93.9349%;
+      top: 41.1047%;
+      font-size: 13.8789px;
+      animation-duration: 6.51326s;
+      animation-delay: 3.70404s;
+    "
+  >
+    💓
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 58.5168%;
+      top: 55.2774%;
+      font-size: 25.4573px;
+      animation-duration: 4.25014s;
+      animation-delay: 3.98802s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 63.3842%;
+      top: 88.7444%;
+      font-size: 21.6376px;
+      animation-duration: 4.30937s;
+      animation-delay: 2.83357s;
+    "
+  >
+    💓
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 14.8959%;
+      top: 46.1364%;
+      font-size: 14.2968px;
+      animation-duration: 4.69769s;
+      animation-delay: 2.87826s;
+    "
+  >
+    💕
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 56.4268%;
+      top: 74.7049%;
+      font-size: 25.5632px;
+      animation-duration: 8.20857s;
+      animation-delay: 1.47249s;
+    "
+  >
+    💓
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 3.17539%;
+      top: 60.8249%;
+      font-size: 11.4891px;
+      animation-duration: 5.77002s;
+      animation-delay: 4.7193s;
+    "
+  >
+    💘
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 26.2429%;
+      top: 22.8647%;
+      font-size: 17.1117px;
+      animation-duration: 9.35327s;
+      animation-delay: 0.996132s;
+    "
+  >
+    💓
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 27.2909%;
+      top: 93.6909%;
+      font-size: 17.1067px;
+      animation-duration: 9.95284s;
+      animation-delay: 2.60848s;
+    "
+  >
+    💘
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 98.4317%;
+      top: 75.572%;
+      font-size: 19.2962px;
+      animation-duration: 5.81662s;
+      animation-delay: 2.15749s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 20.9867%;
+      top: 96.3763%;
+      font-size: 14.762px;
+      animation-duration: 4.91376s;
+      animation-delay: 2.20794s;
+    "
+  >
+    💘
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 55.2247%;
+      top: 49.3315%;
+      font-size: 12.8982px;
+      animation-duration: 7.11719s;
+      animation-delay: 1.29913s;
+    "
+  >
+    💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 29.0577%;
+      top: 48.5338%;
+      font-size: 29.1693px;
+      animation-duration: 9.87159s;
+      animation-delay: 4.8322s;
+    "
+  >
+    💘
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 50.6445%;
+      top: 86.4982%;
+      font-size: 18.1718px;
+      animation-duration: 4.11135s;
+      animation-delay: 1.86336s;
+    "
+  >
+    💕
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 25.6553%;
+      top: 58.284%;
+      font-size: 24.1177px;
+      animation-duration: 8.24697s;
+      animation-delay: 4.99359s;
+    "
+  >
+    💗
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 23.8485%;
+      top: 67.1423%;
+      font-size: 21.1037px;
+      animation-duration: 7.17847s;
+      animation-delay: 1.22292s;
+    "
+  >
+    💓
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 33.8195%;
+      top: 42.1268%;
+      font-size: 11.5949px;
+      animation-duration: 4.6031s;
+      animation-delay: 4.4296s;
+    "
+  >
+    ❤️
+  </div>
+  <div
+    class="heart"
+    style="
+      left: 90.1884%;
+      top: 51.0602%;
+      font-size: 20.0491px;
+      animation-duration: 7.64469s;
+      animation-delay: 3.04842s;
+    "
+  >
+    💘
+  </div>
+</div>
+<div class="cloud"></div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="sparkle" id="sparkle">
+  <div
+    class="sparkle-dot"
+    style="left: 27.4488%; top: 54.3308%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 61.6962%; top: 47.5967%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 23.8199%; top: 33.1886%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 84.2677%; top: 4.02257%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 66.584%; top: 75.5619%; opacity: 0.6736"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 92.5814%; top: 47.4554%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 60.6781%; top: 70.1818%; opacity: 0.5311"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 85.1394%; top: 16.5128%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 96.1624%; top: 14.605%; opacity: 0.4572"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 5.99849%; top: 6.87067%; opacity: 0.3353"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 75.1548%; top: 94.3042%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 54.1029%; top: 44.897%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 80.1501%; top: 96.5224%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 89.8403%; top: 64.5501%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 79.2404%; top: 49.3257%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 45.9014%; top: 18.1285%; opacity: 0.2567"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 50.9224%; top: 26.0442%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 66.3989%; top: 4.36911%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 82.9146%; top: 78.5872%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 82.1641%; top: 48.5941%; opacity: 0.0098"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 25.2865%; top: 86.1678%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 85.9427%; top: 94.8998%; opacity: 0.0145"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 82.5807%; top: 8.36381%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 72.0825%; top: 67.2159%; opacity: 0.1296"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 60.7534%; top: 15.8839%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 9.6396%; top: 38.1553%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 64.5342%; top: 94.1931%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 43.212%; top: 90.3534%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 28.5994%; top: 5.83953%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 31.596%; top: 79.4677%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 86.2265%; top: 4.3973%; opacity: 0.5168"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 37.5281%; top: 69.9165%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 91.174%; top: 31.8664%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 89.0193%; top: 46.608%; opacity: 0.0722"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 94.3807%; top: 50.2504%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 2.32882%; top: 13.0238%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 34.7167%; top: 1.07045%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 83.921%; top: 83.1405%; opacity: 0.5012"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 70.1398%; top: 83.3169%; opacity: 0.3003"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 26.6457%; top: 40.9539%; opacity: 0.6063"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 71.4947%; top: 46.1329%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 16.1703%; top: 27.3222%; opacity: 0.1283"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 46.2469%; top: 84.0223%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 48.4686%; top: 1.19312%; opacity: 0.5418"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 99.2135%; top: 17.3989%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 37.6479%; top: 73.2069%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 10.9974%; top: 88.6235%; opacity: 0.2727"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 54.2797%; top: 12.0989%; opacity: 0.0091"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 84.0676%; top: 62.9061%; opacity: 0.0652"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 95.7863%; top: 91.884%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 5.70446%; top: 94.6593%; opacity: 0.1261"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 77.3275%; top: 20.8122%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 55.7382%; top: 44.9813%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 60.1988%; top: 7.05457%; opacity: 0.0164"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 66.3368%; top: 55.0482%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 55.9516%; top: 78.9223%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 81.3041%; top: 40.9068%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 80.0006%; top: 46.9644%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 36.5596%; top: 9.05651%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 15.3373%; top: 5.11619%; opacity: 0.8622"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 82.0237%; top: 10.503%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 99.8545%; top: 69.2814%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 2.74121%; top: 45.8222%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 92.7715%; top: 54.0822%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 57.3085%; top: 66.6399%; opacity: 0.4187"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 11.9442%; top: 44.5174%; opacity: 0.1426"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 51.5547%; top: 64.959%; opacity: 0.1764"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 18.8323%; top: 91.3099%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 42.4254%; top: 24.787%; opacity: 0"
+  ></div>
+  <div
+    class="sparkle-dot"
+    style="left: 25.4173%; top: 38.1362%; opacity: 0"
+  ></div>
+</div>
+<div id="rose-petals">
+  <div
+    class="rose-petal"
+    style="
+      left: 33.8989%;
+      top: -50px;
+      opacity: 0.679441;
+      transform: translate3d(58.8271px, 807.548px, 0px) rotate(-42.3504deg)
+        scale(0.7395, 0.7395);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 35.5114%;
+      top: -50px;
+      opacity: 0.69602;
+      transform: translate3d(80.1162px, 681.495px, 0px) rotate(111.266deg)
+        scale(0.71292, 0.71292);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 49.4854%;
+      top: -50px;
+      opacity: 0.523915;
+      transform: translate3d(45.348px, 528.759px, 0px) rotate(88.4327deg)
+        scale(0.94431, 0.94431);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 83.2693%;
+      top: -50px;
+      opacity: 0.577693;
+      transform: translate3d(4.0345px, 493.062px, 0px) rotate(28.2463deg)
+        scale(0.59573, 0.59573);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 46.9979%;
+      top: -50px;
+      opacity: 0.529106;
+      transform: translate3d(-26.9779px, 573.481px, 0px) rotate(300.263deg)
+        scale(0.61298, 0.61298);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 83.427%;
+      top: -50px;
+      opacity: 0.435434;
+      transform: translate3d(41.674px, 461.402px, 0px) rotate(107.396deg)
+        scale(0.60497, 0.60497);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 90.0789%;
+      top: -50px;
+      opacity: 0.469391;
+      transform: translate3d(23.5675px, 373.158px, 0px) rotate(44.6385deg)
+        scale(0.73785, 0.73785);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 78.3178%;
+      top: -50px;
+      opacity: 0.776764;
+      transform: translate3d(-12.2308px, 211.465px, 0px) rotate(-36.0728deg)
+        scale(0.54185, 0.54185);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 78.2408%;
+      top: -50px;
+      opacity: 0.598569;
+      transform: translate3d(30.4887px, 315.202px, 0px) rotate(100.896deg)
+        scale(0.99064, 0.99064);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 29.0169%;
+      top: -50px;
+      opacity: 0.596992;
+      transform: translate3d(-22.902px, 239.922px, 0px) rotate(-12.7323deg)
+        skew(0.000247853deg, 0deg) scale(0.96431, 0.96432);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 14.806%;
+      top: -50px;
+      opacity: 0.59705;
+      transform: translate3d(8.1932px, 345.618px, 0px) rotate(213.693deg)
+        scale(0.67382, 0.67382);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 54.3705%;
+      top: -50px;
+      opacity: 0.793284;
+      transform: translate3d(-24.049px, 220.907px, 0px) rotate(116.592deg)
+        scale(0.90529, 0.90529);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 85.6648%;
+      top: -50px;
+      opacity: 0.526881;
+      transform: translate3d(-15.4727px, 169.223px, 0px) rotate(-132.887deg)
+        scale(0.83646, 0.83646);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 45.3913%;
+      top: -50px;
+      opacity: 0.682512;
+      transform: translate3d(29.2244px, 254.99px, 0px) rotate(179.216deg)
+        scale(0.80851, 0.80851);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 54.2392%;
+      top: -50px;
+      opacity: 0.586889;
+      transform: translate3d(15.4474px, 157.611px, 0px) rotate(176.653deg)
+        scale(0.58195, 0.58195);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 6.56975%;
+      top: -50px;
+      opacity: 0.353903;
+      transform: translate3d(-17.7056px, 253.903px, 0px) rotate(177.135deg)
+        scale(0.7865, 0.7865);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 13.6652%;
+      top: -50px;
+      opacity: 0.470815;
+      transform: translate3d(14.4221px, 121.285px, 0px) rotate(-140.172deg)
+        scale(0.6475, 0.6475);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 53.0183%;
+      top: -50px;
+      opacity: 0.312334;
+      transform: translate3d(-0.9659px, 82.4726px, 0px) rotate(46.0814deg)
+        scale(0.5731, 0.5731);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 14.1341%;
+      top: -50px;
+      opacity: 0.466664;
+      transform: translate3d(-1.5192px, 50.0824px, 0px) rotate(-17.4175deg)
+        scale(0.95056, 0.95056);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 11.5241%;
+      top: -50px;
+      opacity: 0.441517;
+      transform: translate3d(3.5829px, 48.789px, 0px) rotate(-4.6145deg)
+        scale(0.91242, 0.91242);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 82.4655%;
+      top: -50px;
+      opacity: 0.47938;
+      transform: translate3d(-2.8356px, 68.7795px, 0px) rotate(-115.903deg)
+        scale(0.67085, 0.67085);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 34.8489%;
+      top: -50px;
+      opacity: 0.593873;
+      transform: translate3d(0.0066px, 44.2553px, 0px) rotate(137.721deg)
+        scale(0.64702, 0.64702);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 70.7992%;
+      top: -50px;
+      opacity: 0.388834;
+      transform: translate3d(3.4023px, 31.8075px, 0px) rotate(-133.896deg)
+        scale(0.60916, 0.60916);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 92.0788%;
+      top: -50px;
+      opacity: 0.638877;
+      transform: translate3d(1.1669px, 30.3751px, 0px) rotate(-35.6911deg)
+        scale(0.94446, 0.94446);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 0.355695%;
+      top: -50px;
+      opacity: 0.728989;
+      transform: translate3d(1.7408px, 18.2651px, 0px) rotate(-80.1994deg)
+        scale(0.80289, 0.80289);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 14.7234%;
+      top: -50px;
+      opacity: 0.762413;
+      transform: translate3d(-0.3388px, 8.1406px, 0px) rotate(-113.755deg)
+        scale(0.65834, 0.65834);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 37.2163%;
+      top: -50px;
+      opacity: 0.456706;
+      transform: translate3d(0.3608px, 5.8476px, 0px) rotate(79.1152deg)
+        scale(0.56865, 0.56865);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 16.575%;
+      top: -50px;
+      opacity: 0.575728;
+      transform: translate3d(-0.0403px, 1.2871px, 0px) rotate(-22.3703deg)
+        scale(0.94561, 0.94561);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 21.8046%;
+      top: -50px;
+      opacity: 0.336899;
+      transform: translate3d(0.0141px, 0.372px, 0px) rotate(-138.017deg)
+        scale(0.51905, 0.51905);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+  <div
+    class="rose-petal"
+    style="
+      left: 32.5559%;
+      top: -50px;
+      opacity: 0.345129;
+      transform: translate3d(0.0001px, 0.0033px, 0px) rotate(-156.82deg)
+        scale(0.59799, 0.59799);
+      translate: none;
+      rotate: none;
+      scale: none;
+    "
+  ></div>
+</div>
+
+<!-- Stickers -->
+<div
+  class="sticker"
+  style="top: 15%; left: 10%; animation-delay: 1.1585s; font-size: 24px"
+>
+  💕
+</div>
+<div class="message" style="top: calc(15% + 40px); left: 10%">
+  Every moment with you feels like magic...
+</div>
+
+<div
+  class="sticker"
+  style="top: 20%; right: 15%; animation-delay: 3.83962s; font-size: 24px"
+>
+  🌹
+</div>
+<div class="message" style="top: calc(20% + 40px); right: 15%">
+  Our love story is my favorite...
+</div>
+
+<div
+  class="sticker"
+  style="bottom: 25%; left: 15%; animation-delay: 0.767113s; font-size: 24px"
+>
+  🎵
+</div>
+<div class="message" style="bottom: calc(25% + 40px); left: 15%">
+  You're the melody to my harmony...
+</div>
+
+<div
+  class="sticker"
+  style="bottom: 20%; right: 10%; animation-delay: 0.293871s; font-size: 24px"
+>
+  ✨
+</div>
+<div class="message" style="bottom: calc(20% + 40px); right: 10%">
+  You make my world sparkle...
+</div>
+
+<div
+  class="sticker"
+  style="top: 30%; left: 25%; animation-delay: 4.69324s; font-size: 24px"
+>
+  🌟
+</div>
+<div class="message" style="top: calc(30% + 40px); left: 25%">
+  You're the star in my night sky...
+</div>
+
+<div
+  class="sticker"
+  style="top: 40%; right: 25%; animation-delay: 3.73944s; font-size: 24px"
+>
+  📸
+</div>
+<div class="message" style="top: calc(40% + 40px); right: 25%">
+  Forever capturing memories with you...
+</div>
+
+<!-- Main Content -->
+<div class="z-10 max-w-4xl text-center content-card">
+  <div class="title-container">
+    <h1
+      id="title"
+      class="text-5xl md:text-6xl font-bold mb-6 text-white"
+      style="
+        font-family: 'Pacifico', cursive;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <span
+        class="letter"
+        style="
+          translate: none;
+          rotate: none;
+          scale: none;
+          transform: translate(0px, 0px);
+          opacity: 1;
+        "
+      >
+      </span>
+      <span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >W</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >e</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >l</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >c</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >o</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >m</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >e</span
+        >
+        <span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >t</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >o</span
+        >
+        <span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          ></span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          ></span
+        
+          >c</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >h</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >r</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >o</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >n</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >i</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >c</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >l</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >e</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >s</span
+        >
+        <span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >o</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >f</span
+        ></span
+      ><br /><span
+        class="letter"
+        style="
+          translate: none;
+          rotate: none;
+          scale: none;
+          transform: translate(0px, 0px);
+          opacity: 1;
+        "
+      >
+      </span>
+      <span class="text-pink-300"
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >y</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >a</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >s</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >h</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >w</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >a</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >n</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >t</span
+          ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >h</span
+          ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+        >
+        <span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+            "
+          >a</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >n</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >d</span
+        ></span
+      ><span
+        class="letter"
+        style="
+          translate: none;
+          rotate: none;
+          scale: none;
+          transform: translate(0px, 0px);
+          opacity: 1;
+        "
+      >
+      </span>
+      <span class="text-pink-300"
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >S</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >o</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >h</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >i</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >n</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          >i</span
+        ><span
+          class="letter"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          "
+          
+        
+      </span>
+    </h1>
+  </div>
+
+  <p class="subtitle">✨ Where every moment becomes a cherished memory ✨</p>
+<a href="index1.html">
+  <div class="button-container">
+    <button
+      id="start-button"
+      class="start-button text-white font-bold py-5 px-16 rounded-full text-xl md:text-2xl shadow-lg"
+    >
+      <span>Begin Our Journey</span>
+      <span class="ml-2"></span>
+    </button>
+  </div>
+</div>
+</a>
+
+<div
+  class="love-quote"
+  id="love-quote"
+  style="
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 0px);
+    opacity: 0.2983;
+  "
+>
+  
+</div>
+
+<script>
+  // Love quotes array
+  const loveQuotes = [
+  
+  ];
+
+  // Display random love quote
+  function showRandomQuote() {
+    const quoteElement = document.getElementById("love-quote");
+    const randomQuote =
+      loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
+    quoteElement.textContent = randomQuote;
+
+    gsap.fromTo(
+      quoteElement,
+      { opacity: 0, y: 20 },
+      { opacity: 0.8, y: 0, duration: 1.5, ease: "power2.out" }
+    );
+
+    setTimeout(fadeOutQuote, 6000);
+  }
+
+  function fadeOutQuote() {
+    const quoteElement = document.getElementById("love-quote");
+    gsap.to(quoteElement, {
+      opacity: 0,
+      duration: 1.5,
+      onComplete: () => {
+        setTimeout(showRandomQuote, 5000);
+      },
+    });
+  }
+
+  // Create falling rose petals
+  function createRosePetals() {
+    const petalContainer = document.getElementById("rose-petals");
+
+    for (let i = 0; i < 30; i++) {
+      setTimeout(() => {
+        const petal = document.createElement("div");
+        petal.classList.add("rose-petal");
+        petal.style.left = `${Math.random() * 100}%`;
+        petal.style.top = `-50px`;
+        petal.style.opacity = `${Math.random() * 0.5 + 0.3}`;
+        petal.style.transform = `rotate(${Math.random() * 360}deg) scale(${
+          Math.random() * 0.5 + 0.5
+        })`;
+        petalContainer.appendChild(petal);
+
+        // Animate petal falling
+        const duration = Math.random() * 10 + 10;
+        gsap.to(petal, {
+          y: window.innerHeight + 100,
+          x: (Math.random() - 0.5) * 200,
+          rotation: `+=${Math.random() * 360}`,
+          duration: duration,
+          ease: "power1.in",
+          onComplete: () => {
+            petal.remove();
+            createPetal();
+          },
+        });
+      }, i * 700);
+    }
+  }
+
+  function createPetal() {
+    const petalContainer = document.getElementById("rose-petals");
+    const petal = document.createElement("div");
+    petal.classList.add("rose-petal");
+    petal.style.left = `${Math.random() * 100}%`;
+    petal.style.top = `-50px`;
+    petal.style.opacity = `${Math.random() * 0.5 + 0.3}`;
+    petal.style.transform = `rotate(${Math.random() * 360}deg) scale(${
+      Math.random() * 0.5 + 0.5
+    })`;
+    petalContainer.appendChild(petal);
+
+    // Animate petal falling
+    const duration = Math.random() * 10 + 10;
+    gsap.to(petal, {
+      y: window.innerHeight + 100,
+      x: (Math.random() - 0.5) * 200,
+      rotation: `+=${Math.random() * 360}`,
+      duration: duration,
+      ease: "power1.in",
+      onComplete: () => {
+        petal.remove();
+        createPetal();
+      },
+    });
+  }
+
+  // Parallax effect for background
+  document.addEventListener("mousemove", (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+    const bgLayer = document.getElementById("bg-layer");
+    bgLayer.style.transform = `translateX(${xAxis}px) translateY(${yAxis}px)`;
+  });
+
+  // Letter by letter animation
+  const titleText = document.getElementById("title").innerHTML;
+  document.getElementById("title").innerHTML = "";
+
+  let htmlWithSpans = "";
+  let inTag = false;
+  let currentTag = "";
+
+  // Process the HTML to wrap each letter in a span
+  for (let i = 0; i < titleText.length; i++) {
+    if (titleText[i] === "<") {
+      inTag = true;
+      currentTag += titleText[i];
+    } else if (titleText[i] === ">") {
+      inTag = false;
+      currentTag += titleText[i];
+      htmlWithSpans += currentTag;
+      currentTag = "";
+    } else if (inTag) {
+      currentTag += titleText[i];
+    } else if (titleText[i] === " ") {
+      htmlWithSpans += " ";
+    } else {
+      htmlWithSpans += `<span class="letter">${titleText[i]}</span>`;
+    }
+  }
+
+  document.getElementById("title").innerHTML = htmlWithSpans;
+
+  // Create floating hearts in the background
+  function createHearts() {
+    const bgLayer = document.getElementById("bg-layer");
+    const hearts = ["❤️", "💖", "💕", "💘", "💓", "💗"];
+
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.top = `${Math.random() * 100}%`;
+      heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+      heart.style.animationDuration = `${Math.random() * 6 + 4}s`;
+      heart.style.animationDelay = `${Math.random() * 5}s`;
+      bgLayer.appendChild(heart);
+    }
+  }
+
+  createHearts();
+
+  // Create sparkle effect
+  function createSparkles() {
+    const sparkleContainer = document.getElementById("sparkle");
+
+    for (let i = 0; i < 70; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle-dot");
+      sparkle.style.left = `${Math.random() * 100}%`;
+      sparkle.style.top = `${Math.random() * 100}%`;
+      sparkleContainer.appendChild(sparkle);
+
+      // Animate sparkle
+      animateSparkle(sparkle);
+    }
+  }
+
+  function animateSparkle(sparkle) {
+    const duration = Math.random() * 2 + 1;
+    const delay = Math.random() * 5;
+
+    gsap.to(sparkle, {
+      opacity: 1,
+      duration: duration / 2,
+      delay: delay,
+      onComplete: () => {
+        gsap.to(sparkle, {
+          opacity: 0,
+          duration: duration / 2,
+          onComplete: () => {
+            sparkle.style.left = `${Math.random() * 100}%`;
+            sparkle.style.top = `${Math.random() * 100}%`;
+            animateSparkle(sparkle);
+          },
+        });
+      },
+    });
+  }
+
+  createSparkles();
+
+  // Animate each letter with GSAP
+  window.addEventListener("DOMContentLoaded", () => {
+    gsap.to(".letter", {
+      opacity: 1,
+      y: 0,
+      duration: 0.08,
+      stagger: 0.05,
+      ease: "elastic.out(1.2, 0.5)",
+    });
+
+    // Random delay for sticker animations
+    document.querySelectorAll(".sticker").forEach((sticker) => {
+      const randomDelay = Math.random() * 5;
+      sticker.style.animationDelay = `${randomDelay}s`;
+    });
+
+    // Start rose petals animation
+    createRosePetals();
+
+    // Start love quotes rotation
+    setTimeout(showRandomQuote, 2000);
+  });
+
+  // Sticker click to show messages
+  document.querySelectorAll(".sticker").forEach((sticker, index) => {
+    sticker.addEventListener("click", () => {
+      const messages = document.querySelectorAll(".message");
+
+      // Hide all other messages
+      messages.forEach((msg) => {
+        if (msg !== messages[index]) {
+          msg.style.display = "none";
+        }
+      });
+
+      // Toggle current message
+      messages[index].style.display =
+        messages[index].style.display === "block" ? "none" : "block";
+
+      // Hide the message after 4 seconds
+      if (messages[index].style.display === "block") {
+        setTimeout(() => {
+          messages[index].style.display = "none";
+        }, 4000);
+      }
+    });
+  });
+
+  // Start button click effect
+  document.getElementById("start-button").addEventListener("click", () => {
+    // Create heart explosion
+    for (let i = 0; i < 40; i++) {
+      const heart = document.createElement("div");
+      heart.textContent = "❤️";
+      heart.style.position = "absolute";
+      heart.style.left = "50%";
+      heart.style.top = "70%";
+      heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+      heart.style.zIndex = "30";
+      document.body.appendChild(heart);
+
+      // Animate heart explosion
+      gsap.to(heart, {
+        x: (Math.random() - 0.5) * window.innerWidth * 0.8,
+        y: (Math.random() - 0.5) * window.innerHeight * 0.8,
+        opacity: 0,
+        duration: 2,
+        ease: "power2.out",
+        onComplete: () => {
+          heart.remove();
+        },
+      });
+    }
+
+    // Fade out page
+    // Fade out page
+    gsap.to("body > *:not(.sparkle)", {
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.05,
+      ease: "power2.inOut",
+      onComplete: () => {
+        window.location.href = "gallery.html"; // Change to your next page URL
+      },
+    });
+  });
+
+  // Mobile detection and optimization
+  function checkMobile() {
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll(".sticker").forEach((sticker) => {
+        sticker.style.fontSize = "24px";
+      });
+
+      document
+        .querySelectorAll(".title-container:before, .title-container:after")
+        .forEach((el) => {
+          el.style.display = "none";
+        });
+    } else {
+      document
+        .querySelectorAll(".title-container:before, .title-container:after")
+        .forEach((el) => {
+          el.style.display = "block";
+        });
+    }
+  }
+
+  window.addEventListener("resize", checkMobile);
+  checkMobile();
+</script>
+</body>
